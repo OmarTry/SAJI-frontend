@@ -1,0 +1,105 @@
+<footer class="w-full bg-charcoal text-slate-300 border-t border-slate-800">
+  <!-- Contenedor Principal -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Columna 1: Marca y Sellos (5 cols) -->
+      <div class="md:col-span-5 flex flex-col gap-4 text-left">
+        <div class="flex items-center gap-2.5">
+          <img 
+            alt="SAJI Logo" 
+            class="h-8 w-auto object-contain" 
+            src="images/logo-saji.png"
+          />
+          <span class="text-xl font-extrabold text-white tracking-tight font-sans">
+            SAJI<span class="text-primary">.</span>
+          </span>
+        </div>
+
+        <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+          Software de contabilidad bimoneda y arquitectura fiscal homologado para el marco tributario venezolano (SENIAT, Providencia 0071, NIC 21).
+        </p>
+
+        <div class="flex flex-wrap items-center gap-2 pt-1">
+          <span class="inline-flex items-center px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono text-[10px] uppercase font-bold tracking-wider">
+            SENIAT COMPLIANT
+          </span>
+          <span class="inline-flex items-center px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10 font-mono text-[10px] uppercase font-bold tracking-wider">
+            BCV AUTO-SYNC
+          </span>
+        </div>
+      </div>
+
+      <!-- Columna 2: Enlaces de Plataforma (4 cols) -->
+      <div class="md:col-span-4 flex flex-col gap-3 text-left">
+        <span class="font-mono text-xs font-bold uppercase tracking-wider text-slate-400">
+          Plataforma
+        </span>
+        <ul class="flex flex-col gap-2.5 text-xs text-slate-300">
+          <li>
+            <a routerLink="/" fragment="soluciones" class="hover:text-primary transition-colors cursor-pointer inline-block">
+              Libros de Compra y Venta
+            </a>
+          </li>
+          <li>
+            <a routerLink="/cumplimiento-seniat" class="hover:text-primary transition-colors cursor-pointer inline-block">
+              Retenciones IVA &amp; ISLR
+            </a>
+          </li>
+          <li>
+            <a routerLink="/bimoneda" class="hover:text-primary transition-colors cursor-pointer inline-block">
+              Tasa Oficial BCV
+            </a>
+          </li>
+          <li>
+            <a routerLink="/precios" class="hover:text-primary transition-colors cursor-pointer inline-block">
+              Planes Corporativos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Contacto y Soporte (3 cols) -->
+      <div class="md:col-span-3 flex flex-col gap-3 text-left">
+        <span class="font-mono text-xs font-bold uppercase tracking-wider text-slate-400">
+          Contacto &amp; Soporte
+        </span>
+        <div class="flex flex-col gap-2.5 text-xs text-slate-300">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px] text-slate-500">location_on</span>
+            <span>Caracas, Venezuela</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px] text-slate-500">mail</span>
+            <a href="mailto:contacto@saji-erp.com" class="hover:text-primary transition-colors">contacto@saji-erp.com</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px] text-slate-500">call</span>
+            <a href="tel:+582127007254" class="hover:text-primary transition-colors font-mono">+58 (212) 700-SAJI</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra Inferior Legal -->
+  <div class="border-t border-slate-800 bg-black/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+      <div>
+        © SAJI Software C.A. • RIF: J-50491823-1. Todos los derechos reservados.
+      </div>
+      <div class="flex items-center gap-5">
+        <a routerLink="/policy" class="hover:text-slate-300 transition-colors">
+          Términos del Servicio
+        </a>
+        <a routerLink="/policy" class="hover:text-slate-300 transition-colors">
+          Privacidad Fiscal
+        </a>
+        <a routerLink="/policy" class="hover:text-slate-300 transition-colors">
+          SLA
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

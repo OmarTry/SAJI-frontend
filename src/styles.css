@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+
+@theme {
+  /* Paleta Corporativa SAJI (Stitch) */
+  --color-primary: #E85D04;
+  --color-primary-hover: #D05202;
+  --color-primary-subtle: #FFF4ED;
+  
+  --color-charcoal: #1A1D20;
+  --color-charcoal-muted: #555D65;
+  
+  --color-surface-bg: #F8F9FA;
+  --color-card-bg: #FFFFFF;
+  --color-border-subtle: #E5E9EE;
+  
+  --color-tertiary: #0F9D58;
+  --color-tertiary-subtle: #EBF8F1;
+
+  /* Tipografías */
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Reglas base globales */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Ocultar barra de scroll según directiva de Stitch */
+::-webkit-scrollbar {
+  display: none;
+}

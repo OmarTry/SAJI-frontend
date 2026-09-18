@@ -1,0 +1,548 @@
+<div class="flex flex-col w-full text-charcoal">
+  <!-- ================================================================= -->
+  <!-- 1. HERO SECTION (Fondo Blanco Técnico con Franjas Horizontales)  -->
+  <!-- ================================================================= -->
+  <section class="relative overflow-hidden w-full px-4 sm:px-6 py-12 lg:py-16 bg-white border-b border-slate-200">
+    <!-- Franjas degradadas arquitectónicas muy sutiles de fondo -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden select-none -z-0 opacity-40">
+      <div class="w-full h-12 bg-gradient-to-b from-[#f1f5f9] to-[#ffffff] border-b border-slate-200/40"></div>
+      <div class="w-full h-12 bg-gradient-to-b from-[#f8fafc] to-[#ffffff] border-b border-slate-200/30"></div>
+      <div class="w-full h-12 bg-gradient-to-b from-[#edf2f7] to-[#ffffff] border-b border-slate-200/40"></div>
+      <div class="w-full h-12 bg-gradient-to-b from-[#f8fafc] to-[#ffffff] border-b border-slate-200/30"></div>
+      <div class="w-full h-12 bg-gradient-to-b from-[#edf2f7] to-[#ffffff] border-b border-slate-200/40"></div>
+      <div class="w-full h-12 bg-gradient-to-b from-[#f1f5f9] to-[#ffffff]"></div>
+      <div class="absolute -top-12 right-1/4 w-[420px] h-[320px] bg-gradient-to-br from-[#e85d04]/[0.06] to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+
+      <!-- Columna Izquierda: Mensaje y Acciones -->
+      <div class="lg:col-span-7 flex flex-col gap-5 text-left">
+        <div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-md bg-primary/10 text-primary text-[11px] font-mono font-bold uppercase tracking-wider border border-primary/20">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span>Suite de Control Cambiario // BCV &amp; SENIAT Homologado</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-charcoal leading-[1.18]">
+          Control Bimoneda y Sincronización Automática con Tasas BCV
+        </h1>
+
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+          Sincronice diariamente las tasas oficiales publicadas por el Banco Central de Venezuela, automatice
+          la liquidación del IGTF (3%) y erradique contingencias por diferencial cambiario bajo el estándar
+          contable internacional NIC 21 y normativas SENIAT.
+        </p>
+
+        <!-- Botones CTA -->
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors"
+            href="#simulador">
+            <span class="material-symbols-outlined text-[18px]">calculate</span>
+            <span>Calcular Liquidación Fiscal</span>
+          </a>
+          <a class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-charcoal border border-slate-300 text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-lg shadow-xs transition-colors"
+            href="#asiento-modelo">
+            <span class="material-symbols-outlined text-[18px] text-slate-500">description</span>
+            <span>Ver Asiento Contable</span>
+          </a>
+        </div>
+
+        <!-- Badges de Cumplimiento -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200/80 text-xs text-slate-700">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">check_circle</span>
+            <span class="font-medium">Sincronización Oficial Diaria</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">verified_user</span>
+            <span class="font-medium">Providencia SNAT/2011/0071</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-600">shield</span>
+            <span class="font-medium">Cero Sanciones NIC 21</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Tarjeta Monitor Oficial BCV -->
+      <div class="lg:col-span-5">
+        <div class="bg-white/95 backdrop-blur-sm rounded-xl border border-slate-300/80 shadow-xl p-5 sm:p-6 flex flex-col gap-4 relative overflow-hidden">
+          
+          <div class="flex items-center justify-between pb-3.5 border-b border-slate-100">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+                </span>
+                <span class="font-mono text-[10px] font-bold text-emerald-700 tracking-wider uppercase">CONECTADO AL BCV</span>
+              </div>
+              <h2 class="text-base font-bold text-charcoal mt-0.5">Monitor Oficial BCV</h2>
+              <span class="text-[10px] font-mono text-slate-400 uppercase">FEED INSTITUCIONAL CANÓNICO</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-slate-100 px-2.5 py-1 rounded-md text-slate-700">
+              <span class="material-symbols-outlined text-[14px] text-primary">sync</span>
+              <span class="font-mono text-[11px] font-semibold">17:00 VET</span>
+            </div>
+          </div>
+
+          <!-- Cuadrícula de Cotizaciones -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200/80 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-700">USD / VES</span>
+                <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 text-[10px] font-bold font-mono">+0.12%</span>
+              </div>
+              <span class="text-xl font-extrabold tabular-nums text-charcoal font-mono">Bs. 36.4250</span>
+              <span class="text-[10px] text-slate-400 font-mono">Fecha Valor: Hoy Cierre</span>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200/80 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-700">EUR / VES</span>
+                <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 text-[10px] font-bold font-mono">+0.08%</span>
+              </div>
+              <span class="text-xl font-extrabold tabular-nums text-charcoal font-mono">Bs. 39.5120</span>
+              <span class="text-[10px] text-slate-400 font-mono">Ponderado Interbancario</span>
+            </div>
+          </div>
+
+          <!-- Curva SVG de Tendencia -->
+          <div class="flex flex-col gap-2 pt-1">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono font-bold text-slate-500 uppercase">Evolución Oficial (30 Días)</span>
+              <div class="flex items-center gap-1">
+                <button type="button" class="px-2 py-0.5 rounded bg-charcoal text-white font-mono text-[10px] font-semibold">30D</button>
+                <button type="button" class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 hover:text-charcoal font-mono text-[10px] transition-colors">60D</button>
+                <button type="button" class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 hover:text-charcoal font-mono text-[10px] transition-colors">YTD</button>
+              </div>
+            </div>
+
+            <div class="relative w-full h-24 bg-slate-50 rounded border border-slate-200/70 p-1">
+              <svg class="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 400 110">
+                <defs>
+                  <linearGradient id="bcvCurveGrad" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#e85d04" stop-opacity="0.25"></stop>
+                    <stop offset="100%" stop-color="#e85d04" stop-opacity="0.0"></stop>
+                  </linearGradient>
+                </defs>
+                <line stroke="#cbd5e1" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="400" y1="20" y2="20"></line>
+                <line stroke="#cbd5e1" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="400" y1="55" y2="55"></line>
+                <line stroke="#cbd5e1" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="400" y1="90" y2="90"></line>
+                <path d="M0,90 Q 60,82 120,78 T 240,55 T 320,38 L 400,16 L 400,110 L 0,110 Z" fill="url(#bcvCurveGrad)"></path>
+                <path d="M0,90 Q 60,82 120,78 T 240,55 T 320,38 L 400,16" stroke="#e85d04" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+                <circle cx="400" cy="16" fill="#e85d04" r="4.5"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-2 border-t border-slate-100 font-mono text-[10px] text-slate-500">
+            <span>SHA-256: 9e4f...b78d BCV Validated</span>
+            <span class="text-primary font-bold">Mesas de Cambio Activas</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 2. SIMULADOR INTERACTIVO (Fondo Gris Pizarra de Trabajo Técnico) -->
+  <!-- ================================================================= -->
+  <section class="w-full px-4 sm:px-6 py-14 lg:py-16 bg-[#f1f5f9] border-b border-slate-300/80" id="simulador">
+    <div class="max-w-[1360px] mx-auto flex flex-col gap-8">
+
+      <!-- Encabezado de Sección -->
+      <div class="flex flex-col gap-1.5 max-w-3xl">
+        <span class="font-mono text-xs font-bold uppercase tracking-wider text-primary">
+          SIMULADOR INTERACTIVO // CUADRE NIC 21 &amp; IGTF
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal tracking-tight">
+          Calcule el impacto fiscal y diferencial cambiario al instante
+        </h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Simule operaciones mercantiles con desglose paralelo dual: IVA (16%), retención SENIAT (75%) y
+          percepción del IGTF (3%) con asiento de partida doble verificado.
+        </p>
+      </div>
+
+      <!-- Superficie de 2 Columnas -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+
+        <!-- Columna Izquierda: Formulario de Parámetros -->
+        <div class="lg:col-span-5 bg-white rounded-xl border border-slate-300/80 shadow-sm p-6 flex flex-col gap-5">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+              <span class="text-sm font-bold text-charcoal">Parámetros de Factura Legal</span>
+            </div>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600">SNAT/2011/0071</span>
+          </div>
+
+          <!-- Selector de Moneda -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-mono font-bold text-slate-500 uppercase">Moneda Base de Transacción</label>
+            <div class="grid grid-cols-3 gap-1 p-1 bg-slate-100 rounded-lg">
+              <button type="button" class="py-1 rounded text-center font-mono text-xs font-bold bg-charcoal text-white shadow-xs">USD ($)</button>
+              <button type="button" class="py-1 rounded text-center font-mono text-xs font-medium text-slate-600 hover:text-charcoal">VES (Bs.)</button>
+              <button type="button" class="py-1 rounded text-center font-mono text-xs font-medium text-slate-600 hover:text-charcoal">EUR (€)</button>
+            </div>
+          </div>
+
+          <!-- Base Imponible -->
+          <div class="flex flex-col gap-1">
+            <label class="text-[11px] font-mono font-bold text-slate-500 uppercase" for="base-imponible">Monto Base Imponible Gravable</label>
+            <div class="relative flex items-center">
+              <span class="absolute left-3 font-mono text-xs font-bold text-slate-400">$</span>
+              <input class="w-full h-10 pl-8 pr-3 rounded-lg border border-slate-200 bg-slate-50 text-charcoal text-sm tabular-nums text-right font-mono font-bold focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                id="base-imponible" step="10.00" type="number" value="1000.00" />
+            </div>
+          </div>
+
+          <!-- Tasa BCV -->
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <label class="text-[11px] font-mono font-bold text-slate-500 uppercase" for="tasa-bcv">Tasa Oficial BCV Aplicable</label>
+              <button type="button" class="flex items-center gap-1 text-primary text-[10px] font-mono font-bold hover:underline">
+                <span class="material-symbols-outlined text-[12px]">refresh</span>
+                <span>Restaurar Tasa Hoy</span>
+              </button>
+            </div>
+            <div class="relative flex items-center">
+              <span class="absolute left-3 font-mono text-xs text-slate-400">Bs./USD:</span>
+              <input class="w-full h-10 pl-20 pr-3 rounded-lg border border-slate-200 bg-slate-50 text-charcoal text-sm tabular-nums text-right font-mono font-bold focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                id="tasa-bcv" step="0.0001" type="number" value="36.4250" />
+            </div>
+          </div>
+
+          <!-- Condición Fiscal -->
+          <div class="flex flex-col gap-1">
+            <label class="text-[11px] font-mono font-bold text-slate-500 uppercase" for="condicion-fiscal">Condición Fiscal del Cliente</label>
+            <div class="relative">
+              <select class="w-full h-10 px-3 pr-8 rounded-lg border border-slate-200 bg-slate-50 text-charcoal text-xs font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer"
+                id="condicion-fiscal">
+                <option value="especial_75">Contribuyente Especial (Retención 75% IVA)</option>
+                <option value="especial_100">Contribuyente Especial (Retención 100% IVA)</option>
+                <option value="ordinario">Contribuyente Ordinario (Sin Retención)</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] pointer-events-none text-slate-400">expand_more</span>
+            </div>
+          </div>
+
+          <!-- Medio de Pago -->
+          <div class="flex flex-col gap-2 pt-1">
+            <span class="text-[11px] font-mono font-bold text-slate-500 uppercase">Medio de Pago / Liquidación</span>
+            <label class="flex items-start gap-2.5 p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input checked class="mt-0.5 text-primary focus:ring-primary" name="medio_pago" type="radio" value="divisas" />
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-charcoal">Divisas en Efectivo / Cuentas Custodia</span>
+                <span class="text-[11px] text-slate-500">Aplica percepción IGTF del 3% sobre el total liquidado</span>
+              </div>
+            </label>
+            <label class="flex items-start gap-2.5 p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input class="mt-0.5 text-primary focus:ring-primary" name="medio_pago" type="radio" value="bolivares" />
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-charcoal">Bolívares (Transferencia / Pago Móvil)</span>
+                <span class="text-[11px] text-slate-500">Exento de percepción IGTF 3%</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Resultado y Desglose Fiscal -->
+        <div class="lg:col-span-7 bg-white rounded-xl border border-slate-300/80 shadow-sm p-6 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-emerald-600">receipt_long</span>
+                <span class="text-sm font-bold text-charcoal">Liquidación Fiscal Bimoneda en Tiempo Real</span>
+              </div>
+              <span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 uppercase border border-emerald-200/60">NIC 21 Verificado</span>
+            </div>
+
+            <!-- Tabla de Desglose -->
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 text-slate-500 font-mono uppercase bg-slate-50/70">
+                    <th class="py-2.5 px-3 font-bold">Concepto Fiscal</th>
+                    <th class="py-2.5 px-3 text-right font-bold">Monto USD ($)</th>
+                    <th class="py-2.5 px-3 text-right font-bold">Monto VES (Bs.)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 font-mono tabular-nums">
+                  <tr class="hover:bg-slate-50/70">
+                    <td class="py-2.5 px-3 text-slate-700 font-sans font-medium">Base Imponible Gravable</td>
+                    <td class="py-2.5 px-3 text-right text-charcoal font-bold">$ 1.000,00</td>
+                    <td class="py-2.5 px-3 text-right text-charcoal font-bold">Bs. 36.425,00</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/70">
+                    <td class="py-2.5 px-3 text-slate-700 font-sans font-medium">Débito Fiscal IVA (16%)</td>
+                    <td class="py-2.5 px-3 text-right text-primary font-bold">+ $ 160,00</td>
+                    <td class="py-2.5 px-3 text-right text-primary font-bold">+ Bs. 5.828,00</td>
+                  </tr>
+                  <tr class="bg-slate-50 font-bold">
+                    <td class="py-2 px-3 text-charcoal font-sans">Subtotal Factura Legal</td>
+                    <td class="py-2 px-3 text-right text-charcoal">$ 1.160,00</td>
+                    <td class="py-2 px-3 text-right text-charcoal">Bs. 42.253,00</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/70">
+                    <td class="py-2.5 px-3 text-rose-700 font-sans font-medium">Retención IVA (75% SENIAT)</td>
+                    <td class="py-2.5 px-3 text-right text-rose-700 font-bold">- $ 120,00</td>
+                    <td class="py-2.5 px-3 text-right text-rose-700 font-bold">- Bs. 4.371,00</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/70">
+                    <td class="py-2.5 px-3 text-emerald-700 font-sans font-medium">Percepción IGTF Divisas (3%)</td>
+                    <td class="py-2.5 px-3 text-right text-emerald-700 font-bold">+ $ 31,20</td>
+                    <td class="py-2.5 px-3 text-right text-emerald-700 font-bold">+ Bs. 1.136,46</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Recuadro Destacado de Totales -->
+            <div class="bg-charcoal text-white p-4 sm:p-5 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
+              <div class="flex flex-col">
+                <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Total Neto a Percibir / Pagar</span>
+                <span class="text-xl sm:text-2xl font-mono font-extrabold tracking-tight tabular-nums text-white">
+                  $ 1.071,20 <span class="text-slate-400 text-sm font-normal">/</span> Bs. 39.018,46
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 mt-0.5">Diferencial fiscal proyectado: 0.0000 Bs.</span>
+              </div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/10 text-emerald-400 font-mono text-[11px] font-bold self-start sm:self-auto border border-white/10">
+                <span class="material-symbols-outlined text-[14px]">done_all</span>
+                <span>Partida Doble Balanceada</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Acciones Inferiores -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100 text-xs">
+            <div class="flex items-center gap-1.5 text-slate-500">
+              <span class="material-symbols-outlined text-base text-emerald-600">check_circle</span>
+              <span>Cuadre aritmético exacto a 4 decimales</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" class="px-3.5 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-charcoal font-medium transition-colors">
+                Copiar Desglose
+              </button>
+              <a class="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold transition-colors shadow-xs"
+                href="#asiento-modelo">
+                Generar Asiento
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 3. OPERATIONAL FLOW (Fondo Blanco Puro con Tarjetas en Relieve)   -->
+  <!-- ================================================================= -->
+  <section class="w-full px-4 sm:px-6 py-14 lg:py-16 bg-white border-b border-slate-200" id="asiento-modelo">
+    <div class="max-w-[1360px] mx-auto flex flex-col gap-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col gap-1.5 max-w-3xl">
+        <span class="font-mono text-xs font-bold uppercase tracking-wider text-primary">
+          Flujo Operativo y Asiento Modelo
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal tracking-tight">
+          Flujo de Facturación, Cobro y Partida Doble en Moneda Dual
+        </h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Visualice el ciclo de vida transaccional completo: desde la emisión de la factura a tasa de corte T1
+          hasta el cobro en divisas a tasa T2 con la respectiva compensación del diferencial cambiario
+          realizado.
+        </p>
+      </div>
+
+      <!-- Process Step Cards (1, 2, 3) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-slate-50/80 rounded-xl p-5 border border-slate-200 shadow-xs flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-primary text-white font-mono font-bold text-sm flex items-center justify-center shrink-0">
+            1
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-sm font-bold text-charcoal">Emisión de Factura (T1)</span>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Tasa BCV de emisión: <strong class="font-mono text-charcoal font-semibold">Bs. 36.2000</strong>. Reconocimiento de Cuenta por Cobrar y Débito Fiscal IVA legal.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50/80 rounded-xl p-5 border border-slate-200 shadow-xs flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-primary text-white font-mono font-bold text-sm flex items-center justify-center shrink-0">
+            2
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-sm font-bold text-charcoal">Cobro Efectivo en Divisas (T2)</span>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Tasa BCV de cobro: <strong class="font-mono text-charcoal font-semibold">Bs. 36.4250</strong>. Percepción simultánea del 3% IGTF y liquidación en Cuenta Custodia.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50/80 rounded-xl p-5 border border-slate-200 shadow-xs flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-primary text-white font-mono font-bold text-sm flex items-center justify-center shrink-0">
+            3
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-sm font-bold text-charcoal">Retención SENIAT y Cierre</span>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Recepción de Retención 75% y reconocimiento contable automático del diferencial cambiario realizado.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accounting Voucher (Comprobante Diario) -->
+      <div class="bg-white rounded-xl border border-slate-300 shadow-md overflow-hidden">
+        <div class="bg-slate-100 px-5 py-3.5 flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-200">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[20px] text-primary">menu_book</span>
+              <span class="font-mono text-xs font-bold text-charcoal">COMPROBANTE DIARIO: CD-2026-11-0428</span>
+            </div>
+            <span class="text-xs text-slate-600 mt-0.5">
+              Cobro Factura FC-00891 + Percepción IGTF 3% + Diferencial NIC 21
+            </span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-500/20 font-mono text-[11px] font-bold self-start md:self-auto">
+            <span class="material-symbols-outlined text-[14px]">verified</span>
+            <span>ESTADO: CUADRADO • DESCUADRE: 0.00</span>
+          </div>
+        </div>
+
+        <!-- Voucher Table (6 Columns Dual Ledger) -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-mono text-[10px] uppercase">
+                <th class="py-3 px-4 font-bold">CÓDIGO CUENTA</th>
+                <th class="py-3 px-4 font-bold">DESCRIPCIÓN DE LA CUENTA</th>
+                <th class="py-3 px-4 text-right font-bold">DEBE USD ($)</th>
+                <th class="py-3 px-4 text-right font-bold">HABER USD ($)</th>
+                <th class="py-3 px-4 text-right font-bold">DEBE VES (BS.)</th>
+                <th class="py-3 px-4 text-right font-bold">HABER VES (BS.)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 font-mono tabular-nums">
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3 px-4 font-bold text-charcoal">1.1.01.02.004</td>
+                <td class="py-3 px-4 font-sans text-slate-700">Banco Nacional - Cuenta Custodia USD (T2: 36.4250)</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">1,071.20</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">39,018.46</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3 px-4 font-bold text-charcoal">1.1.03.01.002</td>
+                <td class="py-3 px-4 font-sans text-slate-700">Anticipo IVA Retenido por Clientes (75%)</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">120.00</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">4,371.00</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3 px-4 font-bold text-charcoal">1.1.02.01.001</td>
+                <td class="py-3 px-4 font-sans text-slate-700">Cuentas por Cobrar Comerciales Nacionales (Cancelación FC-00891)</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">1,160.00</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">41,992.00</td>
+              </tr>
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3 px-4 font-bold text-charcoal">2.1.04.01.015</td>
+                <td class="py-3 px-4 font-sans text-slate-700">IGTF Percibido por Enterar al SENIAT (3% en Divisas)</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">31.20</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-semibold text-charcoal">1,136.46</td>
+              </tr>
+              <tr class="hover:bg-primary/5 transition-colors bg-primary/[0.02]">
+                <td class="py-3 px-4 font-bold text-primary">7.1.02.01.001</td>
+                <td class="py-3 px-4 font-sans font-medium text-primary">Ganancia por Fluctuación Cambiaria Realizada (NIC 21) [Δ T2 - T1]</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right text-slate-400">-</td>
+                <td class="py-3 px-4 text-right font-bold text-primary">261.00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-slate-100 border-t-2 border-slate-300 font-mono font-bold text-xs text-charcoal">
+                <td class="py-3 px-4 uppercase" colspan="2">TOTALES SUMAS IGUALES CUADRADAS</td>
+                <td class="py-3 px-4 text-right tabular-nums">$ 1,191.20</td>
+                <td class="py-3 px-4 text-right tabular-nums">$ 1,191.20</td>
+                <td class="py-3 px-4 text-right tabular-nums">Bs. 43,389.46</td>
+                <td class="py-3 px-4 text-right tabular-nums">Bs. 43,389.46</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="bg-slate-50 px-5 py-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-1.5 font-mono text-[11px] text-slate-500">
+            <span class="material-symbols-outlined text-[15px]">lock</span>
+            <span>Registro sellado criptográficamente bajo identificador fiscal VEN-LEDGER-8812</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-charcoal font-medium shadow-xs transition-colors">
+              <span class="material-symbols-outlined text-[16px]">file_download</span>
+              <span>Exportar TXT Retenciones</span>
+            </button>
+            <button type="button" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-charcoal font-medium shadow-xs transition-colors">
+              <span class="material-symbols-outlined text-[16px]">print</span>
+              <span>Imprimir Asiento</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 4. FINAL EXECUTIVE CTA BLOCK (Fondo Carbón Oscuro Institucional)  -->
+  <!-- ================================================================= -->
+  <section class="w-full px-4 sm:px-6 py-16 bg-[#0f172a]">
+    <div class="max-w-[1360px] mx-auto">
+      <div class="bg-gradient-to-r from-[#1e293b] to-[#0f172a] text-white rounded-2xl p-8 sm:p-10 md:p-12 shadow-2xl border border-slate-700/60 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+        
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col gap-3 max-w-2xl z-10 text-left">
+          <span class="font-mono text-xs font-bold uppercase tracking-wider text-primary">
+            Seguridad Fiscal y Tributaria Nacional
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            ¿Listo para automatizar la gestión bimoneda de su empresa sin riesgos fiscales?
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Nuestros asesores tributarios e ingenieros contables le asisten en la homologación con sus
+            cuentas bancarias nacionales, impresoras fiscales y libros de compra/venta.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0 z-10 w-full md:w-auto">
+          <a routerLink="/auth/register"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-6 py-3 rounded-lg shadow-md transition-all">
+            <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+            <span>Agendar Demostración</span>
+          </a>
+          <a href="tel:+582129537254"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/15 text-sm font-semibold px-5 py-3 rounded-lg shadow-xs transition-all">
+            <span class="material-symbols-outlined text-[18px]">phone</span>
+            <span>+58 (212) 953-SAJI</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

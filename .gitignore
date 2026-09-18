@@ -1,0 +1,70 @@
+# ==========================================
+# Dependencias de paquetes
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# ==========================================
+# Compilación y Salida (Build Outputs)
+# ==========================================
+dist/
+/tmp
+/out-tsc
+/bazel-out
+build/
+
+# ==========================================
+# Caché de Herramientas (Angular, Vite, Tailwind)
+# ==========================================
+.angular/
+.vite/
+.cache/
+.parcel-cache/
+.eslintcache
+
+# ==========================================
+# Entornos y Secretos
+# ==========================================
+environments/
+.env.local
+.env.*.local
+*.env
+# Si manejas archivos environment de Angular con claves privadas:
+# src/environments/environment.prod.ts
+
+# ==========================================
+# Testing y Cobertura de Código
+# ==========================================
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+
+# ==========================================
+# Editores e IDEs
+# ==========================================
+.vscode/*
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# Archivos de Sistema Operativo
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini

@@ -52,6 +52,6 @@ export const serverRoutes: ServerRoute[] = [
     // 4. CATCH-ALL: Página no encontrada y rutas no contempladas
     {
         path: '**',
-        renderMode: RenderMode.Client,
+        renderMode: RenderMode.Server,
     },
 ];

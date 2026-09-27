@@ -1,1 +1,66 @@
-<p>dashboard-layout works!</p>,
+<div class="min-h-screen bg-slate-50 dark:bg-[#0b0e14] text-slate-800 dark:text-slate-100 flex transition-colors duration-200">
+      
+      <!-- 1. Barra Lateral Fija (w-64 = 256px) -->
+      <app-dashboard-sidebar />
+
+      <!-- 2. Viewport Principal con offset para la barra lateral -->
+      <div class="pl-64 flex flex-col flex-1 min-w-0">
+        
+        <!-- NAVBAR INTEGRADO DIRECTAMENTE -->
+        <header class="sticky top-0 z-30 h-16 bg-white/80 dark:bg-[#0b0e14]/85 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 sm:px-8 flex items-center justify-between transition-colors duration-200">
+          
+          <!-- Lado Izquierdo: Selector de Entidad & Píldora de Tasa BCV -->
+          <div class="flex items-center gap-3 sm:gap-4">
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-[#141c2b] border border-slate-200 dark:border-[#232f42] text-xs">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="font-semibold text-slate-800 dark:text-slate-200 truncate max-w-[150px] sm:max-w-none">Inversiones Ávila C.A.</span>
+              <span class="text-slate-400 text-[11px] font-mono hidden md:inline">J-40192831-2</span>
+            </div>
+
+            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06] text-xs font-mono">
+              <span class="text-slate-400 font-sans font-medium text-[10px]">BCV:</span>
+              <span class="font-bold text-slate-800 dark:text-slate-200">36.4250 VES</span>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">+0.12%</span>
+            </div>
+          </div>
+
+          <!-- Lado Derecho: Búsqueda, Notificaciones, Theme Toggle & CTA -->
+          <div class="flex items-center gap-2 sm:gap-3">
+            <!-- Disparador de búsqueda rápida -->
+            <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06] text-xs text-slate-400 cursor-pointer hover:bg-slate-100 dark:hover:bg-white/[0.05] transition-colors">
+              <span class="material-symbols-outlined text-[16px]">search</span>
+              <span>Buscar comprobante o RIF...</span>
+              <kbd class="text-[10px] font-mono bg-white dark:bg-white/[0.06] border border-slate-200 dark:border-transparent px-1.5 py-0.5 rounded text-slate-500 dark:text-slate-400">⌘K</kbd>
+            </div>
+
+            <!-- Notificaciones con indicador -->
+            <button 
+              type="button"
+              class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.05] transition-colors relative" 
+              title="Notificaciones">
+              <span class="material-symbols-outlined text-[20px]">notifications</span>
+              <span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary"></span>
+            </button>
+
+            <!-- Conmutador Reactivo de Tema (Modo Claro / Oscuro) -->
+            <app-theme-toggle />
+
+            <!-- CTA Primario -->
+            <button 
+              type="button"
+              class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white text-xs font-semibold shadow-xs transition-colors cursor-pointer ml-1">
+              <span class="material-symbols-outlined text-[16px]">add</span>
+              <span class="hidden sm:inline">Nueva Factura</span>
+            </button>
+          </div>
+
+        </header>
+
+        <!-- 3. Contenedor de Vistas Hijas -->
+        <main class="flex-1 p-6 sm:p-8 max-w-[1400px] w-full mx-auto">
+          <router-outlet />
+        </main>
+
+      </div>
+
+    </div>

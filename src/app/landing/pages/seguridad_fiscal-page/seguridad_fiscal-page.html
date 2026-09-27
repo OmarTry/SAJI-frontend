@@ -1,0 +1,645 @@
+<div class="flex flex-col w-full text-charcoal">
+
+  <!-- ================================================================= -->
+  <!-- 1. HERO SECTION CON MONITOR DE SALUD FISCAL                      -->
+  <!-- ================================================================= -->
+  <section class="py-12 lg:py-16 bg-gradient-to-b from-[#f3f6fb] via-white to-[#f8fafc] border-b border-slate-200/80 overflow-hidden relative">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Columna Izquierda: Headline & Métricas -->
+        <div class="lg:col-span-6 space-y-6 text-left">
+          
+          <div class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 px-3.5 py-1.5 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            <span class="text-xs font-mono font-bold text-primary tracking-wide uppercase">Auditoría Preventiva y Blindaje Continuo</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-charcoal tracking-tight leading-[1.14]">
+            Blindaje Tributario Integral: <span class="text-primary">Cero multas</span> y cero inconsistencias ante el SENIAT
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
+            SAJI audita proactivamente cada comprobante, retención y asiento bimoneda con sellado criptográfico. Entrégale al fiscal un expediente digital verificado antes de que inicien las observaciones.
+          </p>
+
+          <!-- Botones Primarios -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+            <button 
+              type="button"
+              (click)="runFiscalAuditSimulation()"
+              [disabled]="isAuditing()"
+              class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover disabled:opacity-50 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-lg shadow-sm transition-colors cursor-pointer">
+              <span class="material-symbols-outlined text-[20px]">verified_user</span>
+              <span>Iniciar Diagnóstico Fiscal</span>
+            </button>
+            <a 
+              routerLink="/seguridad-fiscal" 
+              fragment="anatomia-fiscalizacion"
+              class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-300 text-charcoal font-semibold text-xs sm:text-sm px-5 py-3 rounded-lg shadow-2xs transition-colors">
+              <span class="material-symbols-outlined text-[18px] text-slate-500">list_alt</span>
+              <span>Ver Casos de Auditoría</span>
+            </a>
+          </div>
+
+          <!-- Métricas en Píldoras -->
+          <div class="pt-4 grid grid-cols-3 gap-3 border-t border-slate-200/80">
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+              <div class="text-xl font-extrabold text-charcoal font-mono tabular-nums">99.98%</div>
+              <div class="text-[11px] text-slate-500 font-medium mt-0.5">Tasa de Aprobación Fiscal</div>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+              <div class="text-xl font-extrabold text-emerald-600 font-mono tabular-nums">0 Reparos</div>
+              <div class="text-[11px] text-slate-500 font-medium mt-0.5">En Retenciones IVA/ISLR</div>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+              <div class="text-xl font-extrabold text-charcoal font-mono tabular-nums">100%</div>
+              <div class="text-[11px] text-slate-500 font-medium mt-0.5">Providencia SNAT/0071</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Widget Interactivo Monitor de Integridad -->
+        <div class="lg:col-span-6">
+          <div class="bg-[#111622] rounded-2xl border border-slate-800 shadow-2xl p-6 text-white relative overflow-hidden text-left">
+            <!-- Glow FX -->
+            <div class="absolute -top-24 -right-24 w-60 h-60 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Monitor Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800 relative z-10">
+              <div class="flex items-center gap-3">
+                <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+                <div>
+                  <h3 class="text-xs sm:text-sm font-bold text-white tracking-wide">ESCUDO FISCAL SAJI · MONITOR EN VIVO</h3>
+                  <p class="text-[10px] text-slate-400 font-mono">ID: VE-SPE-772910 · RIF: J-40192841-0</p>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-emerald-400 border border-emerald-500/30 font-bold">
+                AUDITORÍA ACTIVA
+              </span>
+            </div>
+
+            <!-- Panel de Controles / Checklist -->
+            <div class="py-4 space-y-2.5 relative z-10 text-xs">
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#182132] border border-slate-800/80">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">✓</span>
+                  <span class="text-slate-200 font-medium">Estatus Contribuyente SENIAT</span>
+                </div>
+                <span class="font-mono text-[10px] text-emerald-400 font-bold">Sujeto Pasivo Especial ACTIVO</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#182132] border border-slate-800/80">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">✓</span>
+                  <span class="text-slate-200 font-medium">Libros de Compras y Ventas</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-400 font-mono text-[10px]">Hash SHA-256</span>
+                  <span class="bg-emerald-900/50 text-emerald-300 px-2 py-0.5 rounded text-[10px] font-bold">Sellado y Cuadrado</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#182132] border border-slate-800/80">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">✓</span>
+                  <span class="text-slate-200 font-medium">Conciliación IGTF 3% (Divisas / Custodia)</span>
+                </div>
+                <span class="font-mono font-semibold text-emerald-400 text-[10px]">Sin discrepancias (100% conciliado)</span>
+              </div>
+
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#182132] border border-slate-800/80">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[10px]">✓</span>
+                  <span class="text-slate-200 font-medium">Diferencial Cambiario NIC 21</span>
+                </div>
+                <span class="text-slate-300 font-mono text-[10px]">Tasa Legal BCV · 4 decimales</span>
+              </div>
+            </div>
+
+            <!-- Caja de Simulación Reactiva con Barra de Progreso -->
+            <div class="mt-2 p-3.5 rounded-xl bg-[#141b29] border border-slate-800 relative">
+              <div class="flex justify-between items-center text-xs mb-2">
+                <span class="text-slate-300 font-medium flex items-center gap-1.5 text-[11px]">
+                  <span class="w-2 h-2 rounded-full" [class.bg-emerald-400]="!isAuditing()" [class.bg-amber-400]="isAuditing()" [class.animate-ping]="isAuditing()"></span>
+                  <span>{{ auditStatus() }}</span>
+                </span>
+                <span class="text-emerald-400 font-mono font-bold text-xs tabular-nums">{{ auditPercentText() }}</span>
+              </div>
+
+              <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                <div 
+                  class="bg-gradient-to-r from-primary to-emerald-400 h-full transition-all duration-300 ease-out" 
+                  [style.width.%]="auditProgress()">
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-3 pt-2 border-t border-slate-800/80">
+                <span class="text-[10px] text-slate-400 font-mono">Último Hash: #7f9a...32bc9</span>
+                <button 
+                  type="button"
+                  (click)="runFiscalAuditSimulation()"
+                  [disabled]="isAuditing()"
+                  class="text-xs bg-primary/20 hover:bg-primary/30 text-orange-300 border border-primary/40 px-3 py-1 rounded font-mono font-bold transition-colors flex items-center gap-1 cursor-pointer disabled:opacity-50">
+                  <span class="material-symbols-outlined text-[14px]">sync</span>
+                  <span>Simular Pre-Auditoría</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 2. CARRUSEL / TABS INTERACTIVO DE SEGURIDAD FISCAL                -->
+  <!-- ================================================================= -->
+  <section class="py-16 lg:py-20 bg-white border-b border-slate-200" id="modulos-seguridad">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-mono font-bold text-primary uppercase tracking-wider block mb-2">Controles Preventivos Activos</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal tracking-tight mb-3">
+          Módulos de Blindaje y Auditoría Continua
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Explora la tecnología de validación que neutraliza las 4 causas de sanción más frecuentes ante fiscalizaciones tributarias.
+        </p>
+      </div>
+
+      <!-- Tab Buttons Navigation -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8" role="tablist">
+        <button 
+          type="button"
+          (click)="switchTab(0)"
+          [class]="currentTab() === 0 ? 'bg-[#111622] text-white border-slate-800 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'"
+          class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border transition-all flex items-center gap-2 cursor-pointer font-mono">
+          <span>01. Retenciones IVA / ISLR</span>
+        </button>
+        <button 
+          type="button"
+          (click)="switchTab(1)"
+          [class]="currentTab() === 1 ? 'bg-[#111622] text-white border-slate-800 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'"
+          class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border transition-all flex items-center gap-2 cursor-pointer font-mono">
+          <span>02. Diferencial Cambiario NIC 21</span>
+        </button>
+        <button 
+          type="button"
+          (click)="switchTab(2)"
+          [class]="currentTab() === 2 ? 'bg-[#111622] text-white border-slate-800 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'"
+          class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border transition-all flex items-center gap-2 cursor-pointer font-mono">
+          <span>03. IGTF 3% &amp; Cuentas Custodia</span>
+        </button>
+        <button 
+          type="button"
+          (click)="switchTab(3)"
+          [class]="currentTab() === 3 ? 'bg-[#111622] text-white border-slate-800 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'"
+          class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold border transition-all flex items-center gap-2 cursor-pointer font-mono">
+          <span>04. Libros SNAT/0071 &amp; Hash</span>
+        </button>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="relative bg-slate-50/70 rounded-2xl border border-slate-200/90 p-6 sm:p-10 shadow-sm min-h-[460px] text-left">
+        
+        <!-- Slide 0: Retenciones -->
+        @if (currentTab() === 0) {
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-fade-in">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                ✓ Control de Integridad #1
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-charcoal">
+                Motor Anti-Reparo de Retenciones (IVA e ISLR)
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Elimina los rechazos masivos en el portal SENIAT. SAJI autocalcula y valida el porcentaje exacto (75% o 100% de Sujeto Pasivo Especial, o tabulador acumulativo de ISLR) generando al instante los comprobantes correlativos y los archivos TXT/XML listos sin tocar Excel.
+              </p>
+              <div class="space-y-2 pt-2 text-xs">
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Formato estricto según especificación técnica oficial SENIAT.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Comprobantes numerados con correlativo protegido contra saltos.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Carga masiva directa para declaración quincenal y mensual.
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="bg-white rounded-xl border border-slate-300/80 shadow-md p-5 font-mono text-xs text-slate-800 space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+                  <span class="font-bold text-charcoal">CONSOLA DE RETENCIONES · TXT GENERATOR</span>
+                  <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">VALIDADO 100%</span>
+                </div>
+                <div class="bg-slate-900 text-emerald-400 p-3 rounded-lg overflow-x-auto text-[11px] leading-relaxed">
+                  <code>J304859210!202604!2026-04-18!C!01!J000123450!00034912!00001290!8500.00!1360.00!0.00!1020.00!0!0!0.00!0.00</code>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-[11px] pt-1">
+                  <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                    <span class="text-slate-500 block">Sujeto Retenido:</span>
+                    <strong class="text-charcoal">DISTRIBUIDORA ANDINA C.A.</strong>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded border border-slate-200">
+                    <span class="text-slate-500 block">Porcentaje Retenido:</span>
+                    <strong class="text-emerald-600">75% IVA (1,020.00 VES)</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Slide 1: Diferencial Cambiario -->
+        @if (currentTab() === 1) {
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-fade-in">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold">
+                ✓ Control de Integridad #2
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-charcoal">
+                Auditoría Automática de Diferencial Cambiario (NIC 21)
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                El desfase entre la tasa BCV de emisión y la tasa BCV del momento del pago genera contingencias fiscales severas por ingresos extraordinarios no declarados. SAJI sincroniza y calcula en 4 decimales exactos la fluctuación realizada y no realizada bajo normativa VEN-NIF.
+              </p>
+              <div class="space-y-2 pt-2 text-xs">
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Fijación vinculante de tasa BCV a la fecha valor del cobro/pago.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Asientos automáticos de Ganancia/Pérdida por fluctuación cambiaria.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Cuadre perfecto en bimoneda (VES y USD) en el Libro Diario.
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="bg-white rounded-xl border border-slate-300/80 shadow-md p-5 font-mono text-xs text-slate-800 space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+                  <span class="font-bold text-charcoal">ARBITRAJE CAMBIARIO · VEN-NIF</span>
+                  <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-[10px] font-bold">DEBE = HABER</span>
+                </div>
+                <div class="space-y-1.5 text-[11px]">
+                  <div class="flex justify-between py-1 border-b border-slate-100">
+                    <span class="text-slate-500">Factura #0821 (Tasa BCV Emisión):</span>
+                    <span class="font-bold">36.1000 VES/USD · $1,000.00</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-100">
+                    <span class="text-slate-500">Cobro Transferencia (Tasa BCV Pago):</span>
+                    <span class="font-bold">36.4250 VES/USD · $1,000.00</span>
+                  </div>
+                  <div class="flex justify-between py-1 text-emerald-700 font-semibold bg-emerald-50 px-2 rounded">
+                    <span>Diferencial Cambiario Realizado:</span>
+                    <span>+325.00 VES (Ganancia Gravable)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Slide 2: IGTF 3% -->
+        @if (currentTab() === 2) {
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-fade-in">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold">
+                ✓ Control de Integridad #3
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-charcoal">
+                Blindaje de IGTF (3%) y Cuentas Custodia
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Determina con precisión quirúrgica cuándo aplica o no el impuesto a grandes transacciones financieras al cobrar en divisas. El sistema segrega la cuenta de pasivo tributario al momento del registro, asegurando el enteramiento puntual al SENIAT.
+              </p>
+              <div class="space-y-2 pt-2 text-xs">
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Separación automática de base imponible e impuesto al cobrar efectivo/divisas.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Distinción de transferencias nacionales vs. cuentas bancarias en el exterior.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Matriz de percepción fiscal lista para declaración quincenal.
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="bg-white rounded-xl border border-slate-300/80 shadow-md p-5 font-mono text-xs text-slate-800 space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+                  <span class="font-bold text-charcoal">PERCEPCIÓN FISCAL IGTF 3%</span>
+                  <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-[10px] font-bold">AGENTE DE PERCEPCIÓN</span>
+                </div>
+                <div class="p-3 bg-slate-900 text-slate-100 rounded-lg space-y-2 text-[11px]">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Total Facturado en Divisas:</span>
+                    <span class="font-bold text-white">$ 2,500.00</span>
+                  </div>
+                  <div class="flex justify-between text-amber-400">
+                    <span>Alícuota Especial IGTF (3%):</span>
+                    <span class="font-bold">$ 75.00 (2,731.88 VES)</span>
+                  </div>
+                  <div class="border-t border-slate-800 pt-2 flex justify-between text-emerald-400 font-bold">
+                    <span>Cuenta Pasivo SENIAT IGTF:</span>
+                    <span>Auto-imputado OK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Slide 3: Libros SNAT/0071 -->
+        @if (currentTab() === 3) {
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-fade-in">
+            <div class="lg:col-span-6 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold">
+                ✓ Control de Integridad #4
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-charcoal">
+                Libros Legales Inmutables con Sellado Hash SHA-256
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Cumplimiento riguroso de la Providencia Administrativa SNAT/0071. Cada Libro de Ventas y Compras digital cuenta con foliación correlativa inalterable, desglose de bases exentas y alícuotas (16%, 8%, 31%), sellado con un identificador criptográfico único.
+              </p>
+              <div class="space-y-2 pt-2 text-xs">
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Foliación y numeración correlativa blindada contra saltos accidentales.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Cuadre automático de retenciones recibidas vs. retenciones enteradas.
+                </div>
+                <div class="flex items-center gap-2 text-slate-700">
+                  <span class="text-emerald-600 font-bold">✔</span> Exportación directa con formato oficial para requerimientos de fiscalización.
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6">
+              <div class="bg-white rounded-xl border border-slate-300/80 shadow-md p-5 font-mono text-xs text-slate-800 space-y-3">
+                <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+                  <span class="font-bold text-charcoal">PROVIDENCIA SNAT/0071 · FOLIACIÓN</span>
+                  <span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded text-[10px] font-bold">HASH ACTIVO</span>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 space-y-2 text-[11px]">
+                  <div class="flex justify-between">
+                    <span class="text-slate-500">Folios Compras Mes:</span>
+                    <span class="font-bold text-charcoal">Folio 001 al 048 (Consecutivo)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-500">Folios Ventas Mes:</span>
+                    <span class="font-bold text-charcoal">Folio 001 al 112 (Consecutivo)</span>
+                  </div>
+                  <div class="p-2 bg-slate-900 text-emerald-400 rounded text-[10px] break-all font-mono">
+                    SHA256: d41d8cd98f00b204e9800998ecf8427e3681491703ab846
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Controles Inferiores del Carrusel -->
+        <div class="flex items-center justify-between mt-8 pt-6 border-t border-slate-200">
+          <div class="flex gap-2">
+            @for (i of [0, 1, 2, 3]; track i) {
+              <button 
+                type="button" 
+                (click)="switchTab(i)"
+                [class]="currentTab() === i ? 'w-6 bg-primary' : 'w-2.5 bg-slate-300'"
+                class="h-2.5 rounded-full transition-all cursor-pointer">
+              </button>
+            }
+          </div>
+          <div class="flex items-center gap-2">
+            <button 
+              type="button"
+              (click)="prevSlide()"
+              aria-label="Anterior Módulo" 
+              class="p-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 transition-colors shadow-2xs cursor-pointer flex items-center justify-center">
+              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+            </button>
+            <button 
+              type="button"
+              (click)="nextSlide()"
+              aria-label="Siguiente Módulo" 
+              class="p-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 transition-colors shadow-2xs cursor-pointer flex items-center justify-center">
+              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 3. ANATOMÍA DE UNA FISCALIZACIÓN (ANTES VS CON SAJI)              -->
+  <!-- ================================================================= -->
+  <section class="py-16 lg:py-20 bg-[#f4f7fb] border-b border-slate-200/90" id="anatomia-fiscalizacion">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-mono font-bold text-primary uppercase tracking-wider block mb-2">Realidad Tributaria en Venezuela</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal tracking-tight mb-3">
+          Anatomía de una Fiscalización
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Cómo se pasa del estrés de las carpetas improvisadas y el riesgo de clausura a un expediente digital intachable listo en 2 minutos.
+        </p>
+      </div>
+
+      <!-- Comparativa Dual -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
+        
+        <!-- Tarjeta Izquierda: Riesgo Alto -->
+        <div class="bg-white rounded-2xl border-2 border-rose-200 p-6 sm:p-8 shadow-2xs relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-rose-100 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold">✕</span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-charcoal">Fiscalización Tradicional</h3>
+                  <span class="text-[10px] font-mono font-bold text-rose-600 uppercase">Riesgo Alto · Gestión Reactiva</span>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono bg-rose-50 border border-rose-200 text-rose-700 font-bold px-2.5 py-1 rounded">
+                Posible Cierre / Reparo
+              </span>
+            </div>
+
+            <ol class="space-y-4 text-xs sm:text-sm">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-50 text-rose-700 font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">1</span>
+                <div>
+                  <strong class="text-charcoal block font-semibold">Llegada imprevista de actuantes fiscales:</strong>
+                  <span class="text-slate-600 leading-relaxed">Búsqueda apresurada de carpetas AZ físicas, libros sin imprimir o desactualizados desde hace dos meses.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-50 text-rose-700 font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">2</span>
+                <div>
+                  <strong class="text-charcoal block font-semibold">Descuadres por tasa BCV no vinculante:</strong>
+                  <span class="text-slate-600 leading-relaxed">Los fiscales detectan diferencias entre la fecha valor del cobro y la tasa declarada, abriendo acta de reparo.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-rose-50 text-rose-700 font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">3</span>
+                <div>
+                  <strong class="text-charcoal block font-semibold">Saltos en números de control:</strong>
+                  <span class="text-slate-600 leading-relaxed">Falta de correlatividad en facturas anuladas o comprobantes de retención emitidos manualmente en hojas de cálculo.</span>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-rose-100 flex items-start gap-2.5 bg-rose-50/50 p-3 rounded-xl">
+            <span class="material-symbols-outlined text-rose-600 text-[20px] shrink-0 mt-0.5">warning</span>
+            <div class="text-xs text-rose-800 leading-relaxed">
+              <strong>Resolución habitual:</strong> Sanciones que van de 5 a 10 días de clausura temporal del establecimiento más multas indexadas al tipo de cambio oficial.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Derecha: Blindaje Con SAJI -->
+        <div class="bg-white rounded-2xl border-2 border-emerald-300 p-6 sm:p-8 shadow-md relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-emerald-100 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-charcoal">Fiscalización con SAJI</h3>
+                  <span class="text-[10px] font-mono font-bold text-emerald-700 uppercase">Blindaje Total · Control Proactivo</span>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold px-2.5 py-1 rounded">
+                Expediente Digital Inmediato
+              </span>
+            </div>
+
+            <ol class="space-y-4 text-xs sm:text-sm">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">1</span>
+                <div>
+                  <strong class="text-charcoal block font-semibold">Entrega en 1 clic del Expediente Digital:</strong>
+                  <span class="text-slate-600 leading-relaxed">Se genera el dossier digital completo con libros foliados, declaraciones y comprobantes sellados con hash SHA-256.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">2</span>
+                <div>
+                  <strong class="text-charcoal block font-semibold">Trazabilidad canónica de Tasa BCV:</strong>
+                  <span class="text-slate-600 leading-relaxed">Cada operación muestra el registro exacto provisto por el Banco Central de Venezuela al segundo exacto de efectuarse.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-mono font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">3</span>
+                <div>
+                  <strong class="text-charcoal block font-semibold">Cero inconsistencias en Providencia 0071:</strong>
+                  <span class="text-slate-600 leading-relaxed">Consecutividad estricta de documentos con bitácora de auditoría inmutable auditada permanentemente por el software.</span>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-emerald-100 flex items-start gap-2.5 bg-emerald-50/60 p-3 rounded-xl">
+            <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0 mt-0.5">verified</span>
+            <div class="text-xs text-emerald-800 leading-relaxed">
+              <strong>Resolución habitual:</strong> Cierre del acta fiscal de comprobación sin observaciones ni medidas cautelares en tiempo récord.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 4. BLOQUE PANORÁMICO: DESPACHOS Y FIRMAS DE AUDITORÍA            -->
+  <!-- ================================================================= -->
+  <section class="py-16 sm:py-20 bg-[#0f172a] text-white relative overflow-hidden" id="contacto-fiscal">
+    <!-- Resplandor sutil -->
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-primary/15 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-12">
+      
+      <!-- Top Panorama Header -->
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/10 px-3.5 py-1.5 rounded-full shadow-sm">
+          <span class="material-symbols-outlined text-[16px] text-primary">account_balance</span>
+          <span class="text-xs font-mono font-bold text-orange-400 uppercase tracking-wider">Programa para Despachos y Firmas de Auditoría</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          Centraliza la contabilidad de múltiples clientes (Multi-RIF) con blindaje garantizado
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          Diseñado específicamente para Contadores Públicos Colegiados (CPC) y asesores tributarios que necesitan auditar carteras complejas sin reprocesos.
+        </p>
+      </div>
+
+      <!-- 3 Tarjetas Integradas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div class="bg-white/[0.04] border border-white/10 hover:border-white/20 rounded-xl p-6 sm:p-7 space-y-3 transition-colors">
+          <div class="w-10 h-10 rounded-lg bg-primary/20 text-primary flex items-center justify-center border border-primary/30">
+            <span class="material-symbols-outlined text-2xl">corporate_fare</span>
+          </div>
+          <h3 class="text-base font-bold text-white tracking-tight">Consola Multi-RIF Unificada</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Monitorea el estatus fiscal y el calendario de vencimientos quincenales de cada razón social cliente desde una única vista sin cambiar de sesión.
+          </p>
+        </div>
+
+        <div class="bg-white/[0.04] border border-white/10 hover:border-white/20 rounded-xl p-6 sm:p-7 space-y-3 transition-colors">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
+            <span class="material-symbols-outlined text-2xl">group_add</span>
+          </div>
+          <h3 class="text-base font-bold text-white tracking-tight">Portal de Carga para Clientes</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Permite que tus clientes suban comprobantes con permisos restringidos; SAJI valida la consistencia fiscal antes de que tu equipo apruebe los asientos.
+          </p>
+        </div>
+
+        <div class="bg-white/[0.04] border border-white/10 hover:border-white/20 rounded-xl p-6 sm:p-7 space-y-3 transition-colors">
+          <div class="w-10 h-10 rounded-lg bg-primary/20 text-primary flex items-center justify-center border border-primary/30">
+            <span class="material-symbols-outlined text-2xl">price_change</span>
+          </div>
+          <h3 class="text-base font-bold text-white tracking-tight">Tarifas Preferenciales por Cartera</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Precios volumétricos y márgenes competitivos por bloque de razones sociales, con soporte directo y personal capacitado en Venezuela.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="space-y-4 pt-2">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <a routerLink="/auth/register" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-lg transition-colors shadow-md border border-white/10">
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+            <span>Contactar Servicio Especializado</span>
+          </a>
+          <a href="tel:+582127007254" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/15 font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-lg transition-colors font-mono">
+            <span class="material-symbols-outlined text-[18px]">call</span>
+            <span>+58 (212) 700-SAJI</span>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400 flex items-center justify-center gap-1.5 pt-2">
+          <span class="material-symbols-outlined text-sm text-emerald-400">verified</span>
+          <span>Atención especializada para contadores públicos colegiados y firmas tributarias en toda Venezuela.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</div>

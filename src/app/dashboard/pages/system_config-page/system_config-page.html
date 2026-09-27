@@ -1,0 +1,734 @@
+<div class="space-y-8 text-left font-sans transition-colors duration-200">
+
+  <!-- ================================================================= -->
+  <!-- 1. HERO SECTION DINÁMICA: ENCABEZADO & TELEMETRÍA OPERATIVA       -->
+  <!-- ================================================================= -->
+  <section class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-white via-white to-primary/5 dark:from-[#111827] dark:via-[#111827] dark:to-primary/10 border border-slate-200 dark:border-slate-800 shadow-2xs space-y-6">
+    
+    <!-- Top Bar: Breadcrumb + Estado + Botones de Acción -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div class="space-y-2">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-xs font-medium text-slate-400">
+          <span>Plataforma</span>
+          <span class="material-symbols-outlined text-[13px] text-slate-400">chevron_right</span>
+          <span>Sistema</span>
+          <span class="material-symbols-outlined text-[13px] text-slate-400">chevron_right</span>
+          <span class="text-primary font-semibold">Configuración Operativa</span>
+        </nav>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 shadow-2xs">
+            <span class="material-symbols-outlined text-[24px]">tune</span>
+          </div>
+          <div>
+            <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+              Configuración &amp; Parámetros Operativos
+            </h1>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+              Personaliza el cálculo fiscal bimoneda, atajos de digitación y reglas de validación en vivo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acciones Principales -->
+      <div class="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+        <div class="hidden sm:flex flex-col items-end mr-1 text-[11px] font-mono">
+          <span class="text-slate-400 text-[10px]">Última sincronización</span>
+          <span class="text-slate-700 dark:text-slate-300 font-semibold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[13px] text-primary animate-spin">sync</span> Hace 4 min
+          </span>
+        </div>
+        <button 
+          type="button" 
+          class="h-9 px-3.5 rounded-lg bg-slate-100 dark:bg-white/[0.04] hover:bg-slate-200 dark:hover:bg-white/[0.08] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer shadow-2xs">
+          <span class="material-symbols-outlined text-[16px] text-slate-400">restart_alt</span>
+          <span>Restablecer</span>
+        </button>
+        <button 
+          type="button" 
+          class="h-9 px-4 rounded-lg bg-primary hover:bg-primary-hover active:bg-[#9a3412] text-white text-xs font-semibold flex items-center gap-2 transition-colors cursor-pointer shadow-xs shadow-primary/20">
+          <span class="material-symbols-outlined text-[18px]">save</span>
+          <span>Guardar Cambios</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Micro-Tarjetas de Resumen Rápido de Configuración (Telemetría de Entrada) -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-slate-200/80 dark:border-slate-800/80">
+      
+      <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50/80 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px]">currency_exchange</span>
+        </div>
+        <div class="min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 block">Indexación Activa</span>
+          <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Tasa BCV 36.4250 VES</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50/80 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
+        <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px]">keyboard</span>
+        </div>
+        <div class="min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 block">Flujo de Entrada</span>
+          <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Navegación [Enter] Activa</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50/80 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
+        <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px]">verified_user</span>
+        </div>
+        <div class="min-w-0">
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 block">Candado Fiscal</span>
+          <span class="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">Correlativos Estrictos</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 2. LAYOUT PRINCIPAL: SUBNAV STICKY + PANELES MODULARES            -->
+  <!-- ================================================================= -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    
+    <!-- SUB-NAV LATERAL DE CATEGORÍAS -->
+    <aside class="lg:col-span-3 sticky top-24 space-y-3 select-none">
+    <div class="p-2 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs space-y-1">
+        
+        <div class="px-3 py-2 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider font-mono">
+        Módulos de Ajuste
+        </div>
+
+        <!-- 1. Bimoneda & BCV -->
+        <button 
+        type="button"
+        (click)="scrollTo('bimoneda', $event)"
+        [class.bg-primary/10]="activeSection() === 'bimoneda'"
+        [class.text-primary]="activeSection() === 'bimoneda'"
+        [class.font-semibold]="activeSection() === 'bimoneda'"
+        class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors cursor-pointer text-left">
+        <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[18px] text-emerald-500">currency_exchange</span>
+            <span>1. Bimoneda &amp; BCV</span>
+        </div>
+        @if (activeSection() === 'bimoneda') {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        }
+        </button>
+
+        <!-- 2. Data-Entry Rápido -->
+        <button 
+        type="button"
+        (click)="scrollTo('captura', $event)"
+        [class.bg-primary/10]="activeSection() === 'captura'"
+        [class.text-primary]="activeSection() === 'captura'"
+        [class.font-semibold]="activeSection() === 'captura'"
+        class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors cursor-pointer text-left">
+        <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[18px] text-sky-500">keyboard</span>
+            <span>2. Data-Entry Rápido</span>
+        </div>
+        @if (activeSection() === 'captura') {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        }
+        </button>
+
+        <!-- 3. Motor SENIAT -->
+        <button 
+        type="button"
+        (click)="scrollTo('seniat', $event)"
+        [class.bg-primary/10]="activeSection() === 'seniat'"
+        [class.text-primary]="activeSection() === 'seniat'"
+        [class.font-semibold]="activeSection() === 'seniat'"
+        class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors cursor-pointer text-left">
+        <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[18px] text-amber-500">verified</span>
+            <span>3. Motor SENIAT</span>
+        </div>
+        @if (activeSection() === 'seniat') {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        } @else {
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">NIC 21</span>
+        }
+        </button>
+
+        <!-- 4. Tablas & Densidad -->
+        <button 
+        type="button"
+        (click)="scrollTo('densidad', $event)"
+        [class.bg-primary/10]="activeSection() === 'densidad'"
+        [class.text-primary]="activeSection() === 'densidad'"
+        [class.font-semibold]="activeSection() === 'densidad'"
+        class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors cursor-pointer text-left">
+        <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[18px] text-purple-500">table_rows</span>
+            <span>4. Tablas &amp; Densidad</span>
+        </div>
+        @if (activeSection() === 'densidad') {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        }
+        </button>
+
+        <!-- 5. Atajos Globales -->
+        <button 
+        type="button"
+        (click)="scrollTo('atajos', $event)"
+        [class.bg-primary/10]="activeSection() === 'atajos'"
+        [class.text-primary]="activeSection() === 'atajos'"
+        [class.font-semibold]="activeSection() === 'atajos'"
+        class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors cursor-pointer text-left">
+        <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+            <span>5. Atajos Globales</span>
+        </div>
+        @if (activeSection() === 'atajos') {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        } @else {
+            <kbd class="text-[10px] bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-300 px-1.5 py-0.5 rounded font-mono border border-slate-200 dark:border-transparent">⌘K</kbd>
+        }
+        </button>
+
+    </div>
+
+    <!-- Ficha de Régimen Fiscal -->
+    <div class="p-4 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs space-y-2 text-xs">
+        <div class="flex items-center gap-2 text-slate-900 dark:text-white font-bold">
+        <span class="material-symbols-outlined text-[17px] text-primary">gavel</span>
+        <span>Régimen Fiscal Activo</span>
+        </div>
+        <p class="text-slate-500 dark:text-slate-400 text-[11px] leading-relaxed">
+        Contribuyente Especial (SNAT/2023/00005). Sujeto a retención del 75% o 100% de IVA y percepción del 3% IGTF.
+        </p>
+    </div>
+    </aside>
+
+    <!-- FORMULARIO MODULAR -->
+    <div class="lg:col-span-9 space-y-6">
+      
+      <!-- ============================================================= -->
+      <!-- SECCIÓN 01: BIMONEDA & MONITOR BCV                            -->
+      <!-- ============================================================= -->
+      <section id="bimoneda" class="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 p-6 space-y-5 shadow-2xs transition-colors">
+        
+        <div class="flex items-start justify-between border-b border-slate-100 dark:border-slate-800/80 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 uppercase">
+                Sección 01
+              </span>
+              <h2 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">
+                Comportamiento Bimoneda &amp; Monitor BCV
+              </h2>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Reglas de indexación cambiaria oficial y tratamiento de diferencial bajo norma NIC 21.
+            </p>
+          </div>
+          <span class="material-symbols-outlined text-emerald-500 text-[22px]">currency_exchange</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- Moneda Base -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+              Moneda base para captura rápida (Data-Entry)
+            </label>
+            <p class="text-[11px] text-slate-400 leading-tight">Denominación predeterminada en compras, inventario y facturación.</p>
+            <div class="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-slate-800">
+              <button type="button" class="py-2 px-3 rounded-lg text-xs font-semibold bg-primary text-white flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <span class="font-mono font-bold">USD</span>
+                <span>Dólar ($)</span>
+              </button>
+              <button type="button" class="py-2 px-3 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span class="font-mono font-bold">VES</span>
+                <span>Bolívares (Bs)</span>
+              </button>
+            </div>
+            <span class="inline-block text-[10px] text-slate-400">
+              * Recomendado para entidades con reposición de inventario indexada.
+            </span>
+          </div>
+
+          <!-- Tolerancia Cambiaria -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+              Margen de tolerancia cambiaria interdiario
+            </label>
+            <p class="text-[11px] text-slate-400 leading-tight">Emite advertencia si el salto de cotización BCV supera este porcentaje.</p>
+            <div class="flex items-center gap-2">
+              <div class="relative flex-1">
+                <input 
+                  type="text" 
+                  value="1.50"
+                  class="w-full h-9 px-3 pr-8 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-300 dark:border-slate-800 text-xs font-mono font-semibold text-slate-900 dark:text-white text-right focus:outline-none focus:border-primary transition-colors"
+                />
+                <span class="absolute right-3 top-2 text-xs font-mono text-slate-400">%</span>
+              </div>
+              <div class="flex items-center gap-1.5 px-3 h-9 rounded-lg bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-medium">
+                <span class="material-symbols-outlined text-[17px]">warning</span>
+                <span>Alerta activa</span>
+              </div>
+            </div>
+            <span class="text-[10px] text-slate-400 block">Variaciones mayores requerirán justificación en la bitácora fiscal.</span>
+          </div>
+        </div>
+
+        <!-- Política de Sincronización BCV -->
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-bold text-slate-900 dark:text-white block">Sincronización de Publicación Vespertina BCV</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400">Consulta automatizada a las 4:00 PM con fecha valor del siguiente día hábil.</span>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 self-start sm:self-auto">
+              API BCV Conectada
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-200 dark:border-slate-800">
+            <label class="flex items-start gap-2.5 p-3 rounded-xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/5 cursor-pointer hover:border-slate-300 dark:hover:border-white/10 transition-colors">
+              <input type="radio" name="bcv-sync" checked class="mt-0.5 text-primary focus:ring-0 accent-primary" />
+              <div class="text-[11px]">
+                <span class="font-semibold text-slate-800 dark:text-slate-200 block">Requerir confirmación de Contraloría</span>
+                <span class="text-slate-400">Notifica al supervisor antes de actualizar la tasa de facturación.</span>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-2.5 p-3 rounded-xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/5 cursor-pointer hover:border-slate-300 dark:hover:border-white/10 transition-colors">
+              <input type="radio" name="bcv-sync" class="mt-0.5 text-primary focus:ring-0 accent-primary" />
+              <div class="text-[11px]">
+                <span class="font-semibold text-slate-800 dark:text-slate-200 block">Aplicación automática silenciosa</span>
+                <span class="text-slate-400">Actualiza la paridad sin interrumpir los puntos de venta o cajas.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Esquema visual de tablas contables -->
+        <div class="space-y-2">
+          <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+            Esquema visual en libros y diarios contables
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="radio" name="table-view" checked class="text-primary focus:ring-0 accent-primary" />
+              <div>
+                <span class="text-xs font-semibold text-slate-900 dark:text-white block">Dual simultánea (USD + VES)</span>
+                <span class="text-[11px] text-slate-400">Columnas paralelas de Debe/Haber en ambas divisas. Cumplimiento SENIAT + gerencial.</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 cursor-pointer">
+              <input type="radio" name="table-view" class="text-primary focus:ring-0 accent-primary" />
+              <div>
+                <span class="text-xs font-semibold text-slate-700 dark:text-slate-300 block">Moneda Primaria + Tooltip</span>
+                <span class="text-[11px] text-slate-400">Vista condensada en Bolívares con contravalor USD flotante al posar cursor.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECCIÓN 02: CAPTURA RÁPIDA & DATA-ENTRY                      -->
+      <!-- ============================================================= -->
+      <section id="captura" class="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 p-6 space-y-5 shadow-2xs transition-colors">
+        
+        <div class="flex items-start justify-between border-b border-slate-100 dark:border-slate-800/80 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider font-mono bg-sky-500/10 text-sky-700 dark:text-sky-400 border border-sky-500/20 uppercase">
+                Sección 02
+              </span>
+              <h2 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">
+                Ergonomía en Captura y Facturación Rápida
+              </h2>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Optimizaciones de teclado continuo, predeterminados fiscales y búsqueda de inventario sin fricción.
+            </p>
+          </div>
+          <span class="material-symbols-outlined text-sky-500 text-[22px]">keyboard</span>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Toggle Enter Grid Navigation -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800">
+            <div class="space-y-0.5 pr-4">
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">
+                Navegación de cuadrícula con tecla [Enter]
+              </span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Al presionar <kbd class="px-1.5 py-0.5 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded font-mono text-[10px] text-slate-700 dark:text-slate-300">Enter</kbd>, el foco salta al siguiente campo del renglón (Cantidad → Precio → Alícuota) en lugar de timbrar o guardar.
+              </span>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0">
+              <input type="checkbox" checked class="sr-only peer" />
+              <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Alícuota Predeterminada -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+              Alícuota impositiva de IVA por defecto al insertar renglón
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <button type="button" class="p-3 rounded-xl bg-primary/10 border border-primary/30 text-left transition-colors flex items-center justify-between cursor-pointer">
+                <div>
+                  <span class="text-xs font-bold text-slate-900 dark:text-white block">General 16%</span>
+                  <span class="text-[10px] text-slate-500 dark:text-slate-400">Art. 27 Ley IVA</span>
+                </div>
+                <span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+              </button>
+
+              <button type="button" class="p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-left transition-colors flex items-center justify-between cursor-pointer">
+                <div>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300 block">Reducida 8%</span>
+                  <span class="text-[10px] text-slate-400">Consumo básico</span>
+                </div>
+              </button>
+
+              <button type="button" class="p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-left transition-colors flex items-center justify-between cursor-pointer">
+                <div>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300 block">Exenta / Exonerada</span>
+                  <span class="text-[10px] text-slate-400">Art. 18 Ley IVA</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Autocompletado SKU -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+              Campos habilitados en el autocompletado rápido de ítems
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 cursor-pointer">
+                <input type="checkbox" checked class="rounded text-primary focus:ring-0 accent-primary" />
+                <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">Código SKU / N/P</span>
+              </label>
+
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 cursor-pointer">
+                <input type="checkbox" checked class="rounded text-primary focus:ring-0 accent-primary" />
+                <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">Descripción comercial</span>
+              </label>
+
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 cursor-pointer">
+                <input type="checkbox" checked class="rounded text-primary focus:ring-0 accent-primary" />
+                <span class="text-xs text-slate-700 dark:text-slate-300 font-medium">Barras (EAN / UPC)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Percepción IGTF 3% -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800">
+            <div class="space-y-0.5 pr-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-semibold text-slate-900 dark:text-slate-200">Percepción Automática de IGTF (3%)</span>
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                  Ley IGTF Divisas
+                </span>
+              </div>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed block">
+                Agrega automáticamente el renglón del 3% cuando el cobro sea en efectivo o custodia en moneda extranjera.
+              </span>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0">
+              <input type="checkbox" checked class="sr-only peer" />
+              <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECCIÓN 03: AUTOMATIZACIONES SENIAT                           -->
+      <!-- ============================================================= -->
+      <section id="seniat" class="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 p-6 space-y-5 shadow-2xs transition-colors">
+        
+        <div class="flex items-start justify-between border-b border-slate-100 dark:border-slate-800/80 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider font-mono bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20 uppercase">
+                Sección 03
+              </span>
+              <h2 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">
+                Automatizaciones Fiscales &amp; Cumplimiento SENIAT
+              </h2>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Verificaciones de RIF en línea, correlatividad de control fiscal e integridad tributaria.
+            </p>
+          </div>
+          <span class="material-symbols-outlined text-amber-500 text-[22px]">verified</span>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Consulta RIF -->
+          <div class="flex items-start justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 gap-3">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-semibold text-slate-900 dark:text-slate-200">Consulta en vivo del padrón SENIAT</span>
+                <span class="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded font-semibold">Caché 24h</span>
+              </div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Valida la condición del RIF al tipear el documento. Mantiene caché local cifrada para no detener la operación ante caídas del portal.
+              </p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+              <input type="checkbox" checked class="sr-only peer" />
+              <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Correlatividad Estricta -->
+          <div class="flex items-start justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 gap-3">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-semibold text-slate-900 dark:text-slate-200">Control de Correlatividad Estricta de Números de Control</span>
+                <span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 text-[10px] font-bold">
+                  Bloqueo Obligatorio
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                Bloquea de inmediato la emisión si el sistema detecta saltos o duplicidades en los correlativos autorizados. Evita sanciones del Art. 101 del COT.
+              </p>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+              <input type="checkbox" checked class="sr-only peer" />
+              <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+          </div>
+
+          <!-- Slider Avisos Cierre -->
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Anticipación de avisos de declaración quincenal</span>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400">Alertas tempranas en dashboard para IVA y retenciones ISLR.</span>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/10 font-mono text-xs font-bold text-primary border border-slate-200 dark:border-transparent">
+                5 días hábiles
+              </span>
+            </div>
+            <input type="range" min="1" max="10" value="5" class="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary" />
+            <div class="flex justify-between text-[10px] font-mono text-slate-400">
+              <span>1 día antes (urgente)</span>
+              <span>5 días (estándar contable)</span>
+              <span>10 días (preventivo)</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECCIÓN 04: TABLAS & DENSIDAD                                 -->
+      <!-- ============================================================= -->
+      <section id="densidad" class="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 p-6 space-y-5 shadow-2xs transition-colors">
+        
+        <div class="flex items-start justify-between border-b border-slate-100 dark:border-slate-800/80 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider font-mono bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20 uppercase">
+                Sección 04
+              </span>
+              <h2 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">
+                Tablas y Densidad de Información Contable
+              </h2>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Espaciado de fila, paginación y formato numérico en libros de compra/venta y asientos diarios.
+            </p>
+          </div>
+          <span class="material-symbols-outlined text-purple-500 text-[22px]">table_rows</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- Densidad de Fila -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+              Densidad de filas en libros y cuadrículas
+            </label>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" class="p-3 rounded-xl bg-primary/10 border border-primary/30 text-left transition-all cursor-pointer">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-bold text-slate-900 dark:text-white">Compacta</span>
+                  <span class="font-mono text-[10px] text-primary font-bold">36px</span>
+                </div>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 leading-tight">Para auditoría continua y fiscalización intensiva.</p>
+              </button>
+
+              <button type="button" class="p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-left transition-all cursor-pointer">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">Cómoda</span>
+                  <span class="font-mono text-[10px] text-slate-400">52px</span>
+                </div>
+                <p class="text-[10px] text-slate-400 leading-tight">Espaciado amplio para pantallas táctiles o monitores 4K.</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Registros por Página -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold text-slate-800 dark:text-slate-200">
+              Registros por página en libros fiscales
+            </label>
+            <div class="grid grid-cols-4 gap-2">
+              <button type="button" class="py-2.5 rounded-lg bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">
+                10
+              </button>
+              <button type="button" class="py-2.5 rounded-lg bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">
+                25
+              </button>
+              <button type="button" class="py-2.5 rounded-lg bg-primary text-xs font-mono font-bold text-white shadow-xs cursor-pointer">
+                50
+              </button>
+              <button type="button" class="py-2.5 rounded-lg bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">
+                100
+              </button>
+            </div>
+            <span class="text-[10px] text-slate-400 block">* 50 renglones optimizan el rendimiento del motor contable.</span>
+          </div>
+        </div>
+
+        <!-- Formato Numérico -->
+        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800">
+          <div class="space-y-0.5 pr-4">
+            <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Formato numérico contable venezolano</span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400">
+              Punto (<span class="font-mono font-bold text-slate-700 dark:text-slate-200">.</span>) para miles y coma (<span class="font-mono font-bold text-slate-700 dark:text-slate-200">,</span>) para decimales obligatoriamente (Ej: <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400">Bs. 1.250.400,50</span>).
+            </span>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer shrink-0">
+            <input type="checkbox" checked class="sr-only peer" />
+            <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+          </label>
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECCIÓN 05: ATAJOS GLOBALES                                   -->
+      <!-- ============================================================= -->
+      <section id="atajos" class="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 p-6 space-y-4 shadow-2xs transition-colors">
+        
+        <div class="flex items-start justify-between border-b border-slate-100 dark:border-slate-800/80 pb-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider font-mono bg-primary/10 text-primary border border-primary/20 uppercase">
+                Sección 05
+              </span>
+              <h2 class="text-base font-bold text-slate-900 dark:text-white tracking-tight">
+                Atajos de Teclado Globales (Operativa Express)
+              </h2>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Comandos directos para operadores contables y digitadores intensivos.
+            </p>
+          </div>
+          <span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          
+          <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div>
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Búsqueda global y comandos</span>
+              <span class="text-[11px] text-slate-400">Explorador de cuentas, RIF y facturas</span>
+            </div>
+            <div class="flex items-center gap-1 font-mono text-xs">
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">⌘</kbd>
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">K</kbd>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div>
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Nueva Factura / Emisión</span>
+              <span class="text-[11px] text-slate-400">Inicia el formulario de venta express</span>
+            </div>
+            <div class="flex items-center gap-1 font-mono text-xs">
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">⌘</kbd>
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">N</kbd>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div>
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Consultar Monitor BCV</span>
+              <span class="text-[11px] text-slate-400">Histórico de tasas y cotizaciones</span>
+            </div>
+            <div class="flex items-center gap-1 font-mono text-xs">
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">⌘</kbd>
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">B</kbd>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div>
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Guardar Borrador de Trabajo</span>
+              <span class="text-[11px] text-slate-400">Guarda asiento o factura sin timbrar</span>
+            </div>
+            <div class="flex items-center gap-1 font-mono text-xs">
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">⌘</kbd>
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">S</kbd>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div>
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Exportar TXT SENIAT</span>
+              <span class="text-[11px] text-slate-400">Estructura oficial de retenciones IVA</span>
+            </div>
+            <div class="flex items-center gap-1 font-mono text-xs">
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">⌘</kbd>
+              <kbd class="px-2 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-slate-700 dark:text-slate-200 shadow-2xs">E</kbd>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+            <div>
+              <span class="text-xs font-semibold text-slate-900 dark:text-slate-200 block">Cancelar / Cerrar Panel Activo</span>
+              <span class="text-[11px] text-slate-400">Cierra modal o descarta cambios</span>
+            </div>
+            <kbd class="px-2.5 py-1 bg-white dark:bg-white/10 border border-slate-200 dark:border-transparent rounded text-xs font-mono text-slate-700 dark:text-slate-200 shadow-2xs">ESC</kbd>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- BARRA DE GUARDADO INFERIOR                                    -->
+      <!-- ============================================================= -->
+      <footer class="p-4 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4 transition-colors">
+        <div class="flex items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+          <span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+          <span>Las directrices operativas aplican a todos los usuarios de <strong>Inversiones Ávila C.A.</strong></span>
+        </div>
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <button type="button" class="w-full sm:w-auto px-4 py-2 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">
+            Descartar cambios
+          </button>
+          <button type="button" class="w-full sm:w-auto px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover active:bg-[#9a3412] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs shadow-primary/20">
+            <span class="material-symbols-outlined text-[18px]">done_all</span>
+            <span>Aplicar y Sincronizar</span>
+          </button>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+</div>

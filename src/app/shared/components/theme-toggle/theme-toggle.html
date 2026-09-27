@@ -1,0 +1,15 @@
+<button
+      type="button"
+      (click)="themeService.toggleTheme()"
+      class="p-2 rounded-lg text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors cursor-pointer flex items-center justify-center"
+      [attr.aria-label]="themeService.currentTheme() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+      [title]="themeService.currentTheme() === 'dark' ? 'Modo Claro' : 'Modo Oscuro'">
+      
+      @if (themeService.currentTheme() === 'dark') {
+        <!-- Icono Sol (Modo Claro) -->
+        <span class="material-symbols-outlined text-[20px] text-amber-400">light_mode</span>
+      } @else {
+        <!-- Icono Luna (Modo Oscuro) -->
+        <span class="material-symbols-outlined text-[20px]">dark_mode</span>
+      }
+    </button>

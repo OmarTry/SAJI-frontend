@@ -2,6 +2,9 @@
 
 @import 'tailwindcss';
 
+/* 1. Variante personalizada de Tailwind v4 para modo oscuro manual (clase .dark en <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Paleta Corporativa SAJI (Stitch) */
   --color-primary: #E85D04;
@@ -23,12 +26,25 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* Reglas base globales */
+/* Reglas base globales y alternancia de tema */
 @layer base {
   html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+  }
+
+  /* Modo Claro Base */
+  body {
+    background-color: var(--color-surface-bg);
+    color: var(--color-charcoal);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Modo Oscuro Base (se activa cuando el <html> tiene la clase .dark) */
+  html.dark body {
+    background-color: #0d111a;
+    color: #f1f5f9;
   }
 }
 

@@ -1,0 +1,129 @@
+<aside class="fixed top-0 bottom-0 left-0 w-64 bg-white dark:bg-[#0d121c] border-r border-slate-200 dark:border-slate-800 flex flex-col justify-between z-40 select-none transition-colors duration-200">
+      
+      <div class="flex flex-col flex-1 min-h-0">
+        <!-- SAJI Brand Mark -->
+        <div class="h-20 px-6 flex items-center gap-3 border-b border-slate-200 dark:border-slate-800/80">
+          <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-white text-base">
+            S
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-sm font-bold tracking-tight text-slate-900 dark:text-white">SAJI</span>
+              <span class="text-[10px] tracking-wider font-semibold text-slate-500 dark:text-slate-400 px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/5 uppercase">ERP</span>
+            </div>
+            <span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono tracking-tight">SENIAT · NIC 21</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex-1 overflow-y-auto px-3 py-6 space-y-6">
+          
+          <!-- Grupo: Plataforma -->
+          <div>
+            <span class="px-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Plataforma</span>
+            <nav class="mt-2 space-y-1">
+              <a 
+                routerLink="/app/resumen" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                [routerLinkActiveOptions]="{ exact: true }"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">dashboard</span>
+                <span>Resumen</span>
+              </a>
+
+              <a 
+                routerLink="/app/ventas" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                <span>Facturación &amp; Ventas</span>
+              </a>
+
+              <a 
+                routerLink="/app/compras" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                <span>Compras &amp; Gastos</span>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Grupo: Fiscal & Contable -->
+          <div>
+            <span class="px-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Fiscal &amp; Contable</span>
+            <nav class="mt-2 space-y-1">
+              <a 
+                routerLink="/app/libros-seniat" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">menu_book</span>
+                <span>Libros SENIAT</span>
+              </a>
+
+              <a 
+                routerLink="/app/retenciones" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">percent</span>
+                <span>Retenciones IVA/ISLR</span>
+              </a>
+
+              <a 
+                routerLink="/app/libro-diario" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">account_balance</span>
+                <span>Libro Diario &amp; Mayor</span>
+              </a>
+
+              <a 
+                routerLink="/app/monitor-bcv" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">currency_exchange</span>
+                <span>Monitor BCV / NIC 21</span>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Grupo: Sistema -->
+          <div>
+            <span class="px-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase">Sistema</span>
+            <nav class="mt-2 space-y-1">
+              <a 
+                routerLink="/app/auditoria" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">lock_clock</span>
+                <span>Bitácora de Auditoría</span>
+              </a>
+
+              <a 
+                routerLink="/app/configuracion-sistema" 
+                routerLinkActive="bg-primary/10 text-primary font-semibold"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.04] text-xs font-medium transition-colors">
+                <span class="material-symbols-outlined text-[18px]">settings</span>
+                <span>Configuración</span>
+              </a>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Active Entity & Session Footer -->
+      <div class="p-3 border-t border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0a0d14]/70">
+        <div class="flex items-center gap-2.5 p-2 rounded-xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors cursor-pointer">
+          <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-xs text-slate-700 dark:text-white shrink-0">
+            AM
+          </div>
+          <div class="flex-1 min-w-0 text-left">
+            <p class="text-xs font-semibold text-slate-900 dark:text-white truncate">Lic. Andrea Mendoza</p>
+            <p class="text-[10px] text-slate-500 dark:text-slate-400 truncate">Inversiones Ávila C.A.</p>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 text-[18px]">unfold_more</span>
+        </div>
+      </div>
+
+    </aside>

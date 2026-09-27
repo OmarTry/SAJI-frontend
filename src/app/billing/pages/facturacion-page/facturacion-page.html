@@ -1,0 +1,588 @@
+<div class="space-y-6 text-left transition-colors duration-200">
+
+  <!-- ================================================================= -->
+  <!-- 1. ENCABEZADO DE LA VISTA Y ACCIONES PRINCIPALES                  -->
+  <!-- ================================================================= -->
+  <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+    <div class="space-y-1">
+      <div class="flex items-center gap-3">
+        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Facturación &amp; Ventas
+        </h1>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-primary/10 text-primary border border-primary/20 tracking-wider">
+          SENIAT Prov. 0071
+        </span>
+      </div>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        Gestión y emisión de facturas fiscales, notas de crédito/débito y libros de ventas SENIAT en dual-currency (USD / VES).
+      </p>
+    </div>
+
+    <!-- Botones de Acción Rápida -->
+    <div class="flex flex-wrap items-center gap-2.5">
+      <button 
+        type="button" 
+        class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-primary hover:bg-primary-hover active:bg-[#9a3412] text-white text-xs font-semibold shadow-xs transition-colors cursor-pointer">
+        <span class="material-symbols-outlined text-[17px]">add_circle</span>
+        <span>+ Emitir Factura Fiscal</span>
+      </button>
+
+      <button 
+        type="button" 
+        class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-white/[0.04] hover:bg-slate-100 dark:hover:bg-white/[0.08] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-medium transition-colors cursor-pointer shadow-2xs">
+        <span class="material-symbols-outlined text-[17px] text-slate-400">upload_file</span>
+        <span>Importar Masivas (CSV/XLS)</span>
+      </button>
+
+      <button 
+        type="button" 
+        class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-white/[0.04] hover:bg-slate-100 dark:hover:bg-white/[0.08] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-medium transition-colors cursor-pointer shadow-2xs">
+        <span class="material-symbols-outlined text-[17px] text-slate-400">menu_book</span>
+        <span>Libro de Ventas (TXT)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 2. BARRA DE MÉTRICAS Y ESTADO RÁPIDO (KPIS)                       -->
+  <!-- ================================================================= -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    
+    <!-- Card 1: Facturado del Período -->
+    <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-2xs transition-colors">
+      <div class="flex items-start justify-between">
+        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Facturado del Período</span>
+        <span class="p-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+          <span class="material-symbols-outlined text-[17px]">trending_up</span>
+        </span>
+      </div>
+      <div class="mt-3">
+        <div class="flex items-baseline gap-2">
+          <span class="text-xl font-bold font-mono text-slate-900 dark:text-white tabular-nums">$38,420.00</span>
+          <span class="text-xs font-mono text-slate-400">USD</span>
+        </div>
+        <p class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-1">
+          Bs. 1,399,448.50 VES <span class="text-emerald-600 dark:text-emerald-400 font-semibold ml-1">+14.2% vs mes ant.</span>
+        </p>
+      </div>
+      <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
+        <span>Tasa Promedio Facturación</span>
+        <span class="font-semibold text-slate-800 dark:text-slate-200">36.4250 VES</span>
+      </div>
+    </div>
+
+    <!-- Card 2: Documentos Emitidos -->
+    <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-2xs transition-colors">
+      <div class="flex items-start justify-between">
+        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Documentos Emitidos</span>
+        <span class="p-1 rounded-md bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">
+          <span class="material-symbols-outlined text-[17px]">receipt</span>
+        </span>
+      </div>
+      <div class="mt-3">
+        <div class="flex items-baseline gap-2">
+          <span class="text-xl font-bold font-mono text-slate-900 dark:text-white tabular-nums">94</span>
+          <span class="text-xs text-slate-400">comprobantes</span>
+        </div>
+        <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono mt-1 font-semibold flex items-center gap-1">
+          <span class="material-symbols-outlined text-[13px]">check_circle</span>
+          <span>100% Timbrado Fiscalmente</span>
+        </p>
+      </div>
+      <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
+        <span>Series Activas</span>
+        <span class="font-semibold text-slate-800 dark:text-slate-200">FAC-2026-A / B</span>
+      </div>
+    </div>
+
+    <!-- Card 3: Cuentas por Cobrar -->
+    <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-2xs transition-colors">
+      <div class="flex items-start justify-between">
+        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Cuentas por Cobrar</span>
+        <span class="p-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400">
+          <span class="material-symbols-outlined text-[17px]">schedule</span>
+        </span>
+      </div>
+      <div class="mt-3">
+        <div class="flex items-baseline gap-2">
+          <span class="text-xl font-bold font-mono text-slate-900 dark:text-white tabular-nums">$6,250.00</span>
+          <span class="text-xs font-mono text-slate-400">USD</span>
+        </div>
+        <p class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-1">
+          Bs. 227,656.25 VES · <span class="text-amber-600 dark:text-amber-400 font-medium">12 facturas abiertas</span>
+        </p>
+      </div>
+      <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
+        <span>Vencidas (&gt;15 días)</span>
+        <span class="font-semibold text-primary">2 ($1,120.00 USD)</span>
+      </div>
+    </div>
+
+    <!-- Card 4: Ajustes & Crédito -->
+    <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col justify-between shadow-2xs transition-colors">
+      <div class="flex items-start justify-between">
+        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ajustes &amp; Crédito</span>
+        <span class="p-1 rounded-md bg-rose-500/10 text-rose-600 dark:text-rose-400">
+          <span class="material-symbols-outlined text-[17px]">remove_done</span>
+        </span>
+      </div>
+      <div class="mt-3">
+        <div class="flex items-baseline gap-2">
+          <span class="text-xl font-bold font-mono text-slate-900 dark:text-white tabular-nums">$450.00</span>
+          <span class="text-xs font-mono text-slate-400">USD</span>
+        </div>
+        <p class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-1">
+          Bs. 16,391.25 VES · <span class="text-slate-400">2 notas aplicadas</span>
+        </p>
+      </div>
+      <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
+        <span>Impacto Fiscal Débito</span>
+        <span class="font-semibold text-rose-600 dark:text-rose-400">-Bs. 2,260.86 IVA</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 3. BARRA DE CONTROL, FILTROS Y PESTAÑAS                           -->
+  <!-- ================================================================= -->
+  <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 space-y-3 shadow-2xs transition-colors">
+    
+    <!-- Pestañas de estado -->
+    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800/80 pb-3">
+      <div class="flex items-center gap-1.5 overflow-x-auto text-xs">
+        <button type="button" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-white/[0.08] text-slate-900 dark:text-white font-semibold flex items-center gap-2 border border-slate-200 dark:border-transparent">
+          <span>Todas</span>
+          <span class="font-mono text-[10px] px-1.5 py-0.2 rounded bg-white dark:bg-white/10 text-slate-700 dark:text-slate-200 shadow-2xs">94</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.04] font-medium flex items-center gap-2 transition-colors">
+          <span>Timbradas / Emitidas</span>
+          <span class="font-mono text-[10px] px-1.5 py-0.2 rounded bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">82</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.04] font-medium flex items-center gap-2 transition-colors">
+          <span>Borradores</span>
+          <span class="font-mono text-[10px] px-1.5 py-0.2 rounded bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">5</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.04] font-medium flex items-center gap-2 transition-colors">
+          <span>Pendientes de Pago</span>
+          <span class="font-mono text-[10px] px-1.5 py-0.2 rounded bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">7</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.04] font-medium flex items-center gap-2 transition-colors">
+          <span>Anuladas</span>
+          <span class="font-mono text-[10px] px-1.5 py-0.2 rounded bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400">0</span>
+        </button>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>Audit Trail: <strong class="text-slate-800 dark:text-slate-200 font-semibold">Activo</strong></span>
+      </div>
+    </div>
+
+    <!-- Filtros de inputs y selectores -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center">
+      
+      <!-- Input de búsqueda -->
+      <div class="md:col-span-5 relative flex items-center">
+        <span class="material-symbols-outlined absolute left-2.5 text-[17px] text-slate-400 pointer-events-none">search</span>
+        <input 
+          type="text"
+          placeholder="Buscar por N° Factura, N° Control, RIF o Razón Social..." 
+          class="w-full h-9 pl-8 pr-3 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 placeholder:text-slate-400 text-xs focus:outline-none focus:border-primary transition-colors"
+        />
+      </div>
+
+      <!-- Filtro Rango de Fecha -->
+      <div class="md:col-span-2 relative">
+        <select class="w-full h-9 px-2.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs focus:outline-none focus:border-primary cursor-pointer">
+          <option>Noviembre 2026 · Q2</option>
+          <option>Noviembre 2026 · Q1</option>
+          <option>Octubre 2026</option>
+          <option>Rango Personalizado...</option>
+        </select>
+      </div>
+
+      <!-- Filtro Moneda -->
+      <div class="md:col-span-2 relative">
+        <select class="w-full h-9 px-2.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs focus:outline-none focus:border-primary cursor-pointer">
+          <option>Moneda: Dual (USD/VES)</option>
+          <option>Moneda: Solo USD</option>
+          <option>Moneda: Solo VES</option>
+        </select>
+      </div>
+
+      <!-- Filtro Tipo Doc -->
+      <div class="md:col-span-2 relative">
+        <select class="w-full h-9 px-2.5 rounded-lg bg-slate-50 dark:bg-white/[0.03] border border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs focus:outline-none focus:border-primary cursor-pointer">
+          <option>Tipo: Todos</option>
+          <option>Facturas Fiscales</option>
+          <option>Notas de Crédito</option>
+          <option>Notas de Débito</option>
+        </select>
+      </div>
+
+      <!-- Botón Exportar -->
+      <div class="md:col-span-1 flex justify-end">
+        <button 
+          type="button" 
+          class="w-full h-9 flex items-center justify-center gap-1 rounded-lg bg-slate-50 dark:bg-white/[0.03] hover:bg-slate-100 dark:hover:bg-white/[0.08] border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium transition-colors cursor-pointer" 
+          title="Exportar Vista">
+          <span class="material-symbols-outlined text-[15px] text-slate-400">download</span>
+          <span>Exp</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 4. TABLA PRINCIPAL DE COMPROBANTES FISCALES                       -->
+  <!-- ================================================================= -->
+  <div class="bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-2xs transition-colors">
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse text-left">
+        <thead>
+          <tr class="bg-slate-50/75 dark:bg-white/[0.02] border-b border-slate-200 dark:border-slate-800 text-slate-400 text-[10px] font-semibold uppercase tracking-wider h-9">
+            <th class="py-2.5 px-4 text-left">Documento / Control</th>
+            <th class="py-2.5 px-4 text-left">Cliente &amp; RIF</th>
+            <th class="py-2.5 px-4 text-left">Emisión / Plazo</th>
+            <th class="py-2.5 px-4 text-right">Base Imponible &amp; IVA</th>
+            <th class="py-2.5 px-4 text-right">Total Bimoneda</th>
+            <th class="py-2.5 px-4 text-center">Estatus Fiscal</th>
+            <th class="py-2.5 px-4 text-center">Cobro</th>
+            <th class="py-2.5 px-4 text-right">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60 text-xs text-slate-700 dark:text-slate-300">
+          
+          <!-- Fila 1 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span class="font-mono font-bold text-slate-900 dark:text-white">FACT-002891</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 pl-3.5 block">Ctrl: 00-019482</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-semibold text-slate-800 dark:text-slate-200 block truncate max-w-[220px]">Distribuidora Los Andes C.A.</span>
+              <span class="font-mono text-[11px] text-slate-400">RIF: J-31298455-1</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="block">13 Nov 2026</span>
+              <span class="font-mono text-[10px] text-slate-400">Vence: 28 Nov (15 d)</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="block text-slate-800 dark:text-slate-200 font-medium">$1,000.00 USD</span>
+              <span class="text-[10px] text-slate-400">IVA 16%: $160.00</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$1,160.00 USD</span>
+              <span class="text-[10px] text-slate-400">Bs. 42,253.00 VES</span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span class="material-symbols-outlined text-[12px]">verified</span>
+                <span>Timbrado SENIAT</span>
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300">
+                Pendiente
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Ver PDF Fiscal">
+                  <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Descargar XML">
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Enviar por Email">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 2 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span class="font-mono font-bold text-slate-900 dark:text-white">FACT-002890</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 pl-3.5 block">Ctrl: 00-019481</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-semibold text-slate-800 dark:text-slate-200 block truncate max-w-[220px]">Farmacéutica Central de Venezuela S.A.</span>
+              <span class="font-mono text-[11px] text-slate-400">RIF: J-29384712-4</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="block">12 Nov 2026</span>
+              <span class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Pagado 12 Nov</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="block text-slate-800 dark:text-slate-200 font-medium">$4,500.00 USD</span>
+              <span class="text-[10px] text-slate-400">IVA Exento (Medicinas)</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$4,500.00 USD</span>
+              <span class="text-[10px] text-slate-400">Bs. 163,912.50 VES</span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span class="material-symbols-outlined text-[12px]">verified</span>
+                <span>Timbrado SENIAT</span>
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">
+                Cobrado 100%
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Ver PDF Fiscal">
+                  <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Descargar XML">
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Enviar por Email">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 3 (Nota de Crédito) -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                <span class="font-mono font-bold text-rose-600 dark:text-rose-400">NC-000142</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 pl-3.5 block">Ctrl: 00-019480</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-semibold text-slate-800 dark:text-slate-200 block truncate max-w-[220px]">Soluciones Cloud Caracas C.A.</span>
+              <span class="font-mono text-[11px] text-slate-400">RIF: J-40822199-0 (Ref: FACT-002870)</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="block">11 Nov 2026</span>
+              <span class="font-mono text-[10px] text-slate-400">Ajuste por descuento</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono text-rose-600 dark:text-rose-400">
+              <span class="block font-medium">-$250.00 USD</span>
+              <span class="text-[10px] opacity-80">IVA 16%: -$40.00</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono text-rose-600 dark:text-rose-400">
+              <span class="font-bold block">-$290.00 USD</span>
+              <span class="text-[10px] opacity-80">-Bs. 10,563.25 VES</span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span class="material-symbols-outlined text-[12px]">verified</span>
+                <span>Timbrado SENIAT</span>
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                Aplicada
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Ver PDF Fiscal">
+                  <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Descargar XML">
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 4 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span class="font-mono font-bold text-slate-900 dark:text-white">FACT-002889</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 pl-3.5 block">Ctrl: 00-019479</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-semibold text-slate-800 dark:text-slate-200 block truncate max-w-[220px]">Alimentos y Bebidas El Ávila S.R.L.</span>
+              <span class="font-mono text-[11px] text-slate-400">RIF: J-30485910-8</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="block">10 Nov 2026</span>
+              <span class="font-mono text-[10px] text-slate-400">Vence: 25 Nov (12 d)</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="block text-slate-800 dark:text-slate-200 font-medium">$3,200.00 USD</span>
+              <span class="text-[10px] text-slate-400">IVA 16%: $512.00</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$3,712.00 USD</span>
+              <span class="text-[10px] text-slate-400">Bs. 135,209.60 VES</span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span class="material-symbols-outlined text-[12px]">verified</span>
+                <span>Timbrado SENIAT</span>
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                Abono 50%
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Ver PDF Fiscal">
+                  <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Descargar XML">
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Enviar por Email">
+                  <span class="material-symbols-outlined text-[16px]">send</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 5 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span class="font-mono font-bold text-slate-900 dark:text-white">FACT-002888</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 pl-3.5 block">Ctrl: 00-019478</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-semibold text-slate-800 dark:text-slate-200 block truncate max-w-[220px]">Consorcio Metalúrgico Industrial C.A.</span>
+              <span class="font-mono text-[11px] text-slate-400">RIF: J-00192837-1</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="block">09 Nov 2026</span>
+              <span class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">Pagado 10 Nov</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="block text-slate-800 dark:text-slate-200 font-medium">$8,750.00 USD</span>
+              <span class="text-[10px] text-slate-400">IVA 16%: $1,400.00</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$10,150.00 USD</span>
+              <span class="text-[10px] text-slate-400">Bs. 369,713.75 VES</span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span class="material-symbols-outlined text-[12px]">verified</span>
+                <span>Timbrado SENIAT</span>
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">
+                Cobrado 100%
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Ver PDF Fiscal">
+                  <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+                </button>
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors" title="Descargar XML">
+                  <span class="material-symbols-outlined text-[16px]">code</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 6 (Borrador) -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                <span class="font-mono font-bold text-slate-500 dark:text-slate-400">BORR-000042</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 pl-3.5 block">Ctrl: [Pendiente]</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-semibold text-slate-800 dark:text-slate-200 block truncate max-w-[220px]">Red Óptica Telemática de Venezuela C.A.</span>
+              <span class="font-mono text-[11px] text-slate-400">RIF: J-41209384-5</span>
+            </td>
+            <td class="py-3 px-4">
+              <span class="block">14 Nov 2026</span>
+              <span class="font-mono text-[10px] text-slate-400">En preparación</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="block text-slate-800 dark:text-slate-200 font-medium">$850.00 USD</span>
+              <span class="text-[10px] text-slate-400">IVA 16%: $136.00</span>
+            </td>
+            <td class="py-3 px-4 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$986.00 USD</span>
+              <span class="text-[10px] text-slate-400">Bs. 35,915.05 VES</span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400">
+                <span class="material-symbols-outlined text-[12px]">edit_note</span>
+                <span>Borrador</span>
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 dark:bg-white/[0.02] text-slate-400">
+                Sin emitir
+              </span>
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="flex items-center justify-end gap-1">
+                <button type="button" class="p-1 rounded hover:bg-slate-100 dark:hover:bg-white/[0.06] text-primary" title="Editar Borrador">
+                  <span class="material-symbols-outlined text-[16px]">edit</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Paginador -->
+    <div class="p-3 bg-slate-50/75 dark:bg-white/[0.02] border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span>Mostrando 1 a 6 de 94 comprobantes</span>
+        <span class="text-slate-300 dark:text-slate-700">|</span>
+        <span>Período Fiscal Activo: 11-2026</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <button type="button" class="px-2.5 py-1 rounded bg-white dark:bg-white/[0.04] text-slate-400 hover:text-slate-700 dark:hover:text-white border border-slate-200 dark:border-slate-800 disabled:opacity-40 cursor-pointer" disabled>
+          Anterior
+        </button>
+        <button type="button" class="px-2.5 py-1 rounded bg-primary text-white font-semibold shadow-2xs cursor-pointer">
+          1
+        </button>
+        <button type="button" class="px-2.5 py-1 rounded bg-white dark:bg-white/[0.04] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 cursor-pointer">
+          2
+        </button>
+        <button type="button" class="px-2.5 py-1 rounded bg-white dark:bg-white/[0.04] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 cursor-pointer">
+          3
+        </button>
+        <span class="px-1 text-slate-400">...</span>
+        <button type="button" class="px-2.5 py-1 rounded bg-white dark:bg-white/[0.04] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 cursor-pointer">
+          14
+        </button>
+        <button type="button" class="px-2.5 py-1 rounded bg-white dark:bg-white/[0.04] text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 cursor-pointer">
+          Siguiente
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

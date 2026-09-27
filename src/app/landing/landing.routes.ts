@@ -32,15 +32,9 @@ export const landingRoutes: Routes = [
       import('./pages/firmas-contables/firmas-contables'),
   },
   {
-    path: 'cumplimiento-seniat',
-    title: 'Cumplimiento SENIAT | SAJI',
+    path: 'seguridad-fiscal',
+    title: 'Seguridad Fiscal | SAJI',
     loadComponent: () =>
-      import('./pages/cumplimiento-seniat/cumplimiento-seniat'),
-  },
-  {
-    path: 'seguridad',
-    title: 'Seguridad y Privacidad | SAJI',
-    loadComponent: () =>
-      import('./pages/security-page/security-page'),
+      import('./pages/seguridad_fiscal-page/seguridad_fiscal-page'),
   },
 ];

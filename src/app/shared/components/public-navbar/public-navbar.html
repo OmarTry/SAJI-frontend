@@ -1,40 +1,181 @@
-<header class="fixed top-0 left-0 right-0 z-50 bg-charcoal border-b border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur-md">
-  <div class="bg-[#111315] border-b border-white/5 py-1 text-center">
-    <div class="w-full px-4 sm:px-8 lg:px-12 mx-auto flex items-center justify-center gap-2 text-[11px] font-medium text-gray-300 tracking-wide">
-      <span class="text-primary font-bold">⚡</span>
-      <span class="">Gaceta Oficial &amp; Homologación SENIAT al día</span>
-      <span class="text-white/30 hidden sm:inline">•</span>
-      <span class="text-gray-400 hidden sm:inline">Automatización de tasas oficiales BCV e IGTF 3% en tiempo real</span>
+<!-- BEGIN: TopNotificationBar -->
+<aside class="bg-[#111622] text-slate-300 text-xs py-2 px-4 border-b border-slate-800" data-purpose="market-ticker">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+    <!-- Live Notification -->
+    <div class="flex items-center gap-2 text-center md:text-left font-medium">
+      <span class="text-amber-400">⚡</span>
+      <span>Gaceta Oficial &amp; Homologación SENIAT al día</span>
+      <span class="hidden md:inline text-slate-600">·</span>
+      <span class="text-slate-400 hidden sm:inline">Automatización de tasas oficiales BCV e IGTF 3% en tiempo
+        real</span>
+    </div>
+    <!-- BCV Rate Pill -->
+    <div class="flex items-center gap-3">
+      <div class="inline-flex items-center gap-2 bg-[#1b2234] border border-slate-700/60 px-2.5 py-1 rounded-full">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-400">BCV Oficial:</span>
+        <span class="font-semibold text-white tabular-nums">36.4250 VES/USD</span>
+        <span
+          class="bg-[#e85d04]/20 text-[#e85d04] border border-[#e85d04]/30 text-[10px] font-bold px-1.5 py-0.2 rounded uppercase tracking-wider">En
+          Vivo</span>
+      </div>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between py-3">
-    <div class="flex items-center gap-8">
-      <a class="flex items-center gap-3 group" routerLink="/">
-        <img alt="SAJI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W6Jlb8AIa9xUmxVqIJPvGIAd059Ri0V9ecwOzG75pVgeu9rhwJmO_e2tVwO-o9qFfhMW7fKeTNH32Wvdp5Rp7y24IXg47obyznDvr9slifgrMrZYXW8mDlheneGAZPUmQXFts1sVbGO1Wrw_9vxewUu7XGrWoAwt1aYcnj6r3MztfXHo-Ng2dtRy8-fV_NV1EFv127YJykzw1i8P-MvIQclRWJnOEQLCpwke8eRSjFSK2Q_vnbp81FV50">
+</aside>
+<!-- BEGIN: MainHeader -->
+<header class="bg-[#111622] sticky top-0 z-50 border-b border-slate-800/80 backdrop-blur-md bg-opacity-95">
+  <!-- Contenedor ampliado a 1400px con paddings coordinados -->
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    
+    <!-- Brand Logo & Main Nav -->
+    <div class="flex items-center gap-6 lg:gap-8">
+      <!-- Logo SAJI -->
+      <a routerLink="/" (click)="closeMobileMenu()" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-black text-white text-lg tracking-wider shadow-xs group-hover:scale-105 transition-transform duration-150">
+          S
+        </div>
+        <span class="text-white font-extrabold text-xl tracking-tight">SAJI</span>
       </a>
-      <nav class="hidden md:flex items-center gap-7 text-[14.5px] font-medium text-gray-300">
-        <a class="hover:text-white transition-colors duration-150" routerLink="/soluciones">Soluciones</a>
-        <a class="hover:text-white transition-colors duration-150" routerLink="/bimoneda">Bimoneda BCV</a>
-        <a class="hover:text-white transition-colors duration-150" routerLink="/cumplimiento-seniat">Cumplimiento SENIAT</a>
-        <a class="hover:text-white transition-colors duration-150" routerLink="/precios">Precios</a>
+
+      <!-- Navegación Principal (Desktop) -->
+      <nav aria-label="Navegación principal" class="hidden lg:flex items-center space-x-1">
+        <!-- Soluciones (Scroll a sección) -->
+        <a 
+          routerLink="/soluciones" 
+          routerLinkActive="bg-slate-800/90 text-white font-semibold shadow-2xs"
+          [routerLinkActiveOptions]="{ exact: true }"
+          #solucionesLink="routerLinkActive"
+          class="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors flex items-center gap-1.5">
+          
+          @if (solucionesLink.isActive) {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          }
+          <span>Soluciones</span>
+        </a>
+
+        <!-- Seguridad Fiscal (Activa dinámicamente con indicador de color) -->
+        <a 
+          routerLink="/seguridad-fiscal" 
+          routerLinkActive="bg-slate-800/90 text-white font-semibold shadow-2xs"
+          [routerLinkActiveOptions]="{ exact: true }"
+          #fiscalLink="routerLinkActive"
+          class="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors flex items-center gap-1.5">
+          @if (fiscalLink.isActive) {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          }
+          <span>Seguridad Fiscal</span>
+        </a>
+
+        <!-- Control Bimoneda -->
+        <a 
+          routerLink="/bimoneda" 
+          routerLinkActive="bg-slate-800/90 text-white font-semibold shadow-2xs"
+          [routerLinkActiveOptions]="{ exact: true }"
+          #bimonedaLink="routerLinkActive"
+          class="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors flex items-center gap-1.5">
+          @if (bimonedaLink.isActive) {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          }
+          <span>Bimoneda</span>
+        </a>
+
+        <!-- Precios -->
+        <a 
+          routerLink="/precios" 
+          routerLinkActive="bg-slate-800/90 text-white font-semibold shadow-2xs"
+          [routerLinkActiveOptions]="{ exact: true }"
+          #preciosLink="routerLinkActive"
+          class="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-colors flex items-center gap-1.5">
+          @if (preciosLink.isActive) {
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          }
+          <span>Precios</span>
+        </a>
       </nav>
     </div>
-    <div class="flex items-center gap-4">
-      <div class="hidden lg:flex items-center gap-2.5 bg-white/10 text-xs px-3.5 py-1.5 rounded-full text-white font-medium border border-white/15 shadow-sm">
-        <span class="relative flex h-2 w-2">
-          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
-        </span>
-        <span class="text-gray-300 font-normal">BCV Oficial:</span>
-        <span class="font-mono font-semibold text-white tracking-tight">36.42 VES/USD</span>
-        <span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary font-mono text-[10px] font-bold uppercase tracking-wider">En Vivo</span>
-      </div>
-      <a class="text-sm font-medium text-gray-300 hover:text-white transition-colors hidden sm:inline-block px-2" routerLink="/">
+
+    <!-- Action Buttons & Hamburguesa Móvil -->
+    <div class="flex items-center gap-3 sm:gap-4">
+      <!-- Iniciar Sesión -->
+      <a 
+        routerLink="/auth/iniciar-sesion" 
+        class="text-sm font-medium text-slate-300 hover:text-white transition-colors hidden sm:block px-2 py-1.5">
         Iniciar Sesión
       </a>
-      <a class="h-10 px-5 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-lg shadow-sm transition-all duration-150 flex items-center justify-center gap-1.5 border border-white/10" routerLink="/">
-        <span class="">Solicitar Demo</span>
-        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+
+      <!-- CTA Solicitar Demo -->
+      <a 
+        routerLink="/auth/registrarse" 
+        class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-xs border border-white/10">
+        <span>Solicitar Demo</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
       </a>
+
+      <!-- Toggle Móvil (Solo visible en < lg) -->
+      <button 
+        type="button" 
+        (click)="toggleMobileMenu()"
+        class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none lg:hidden"
+        aria-label="Alternar navegación móvil">
+        @if (!isMobileMenuOpen()) {
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        } @else {
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        }
+      </button>
     </div>
+
   </div>
+
+  <!-- Desplegable Móvil -->
+  @if (isMobileMenuOpen()) {
+    <div class="lg:hidden bg-[#111622] border-t border-slate-800 px-4 py-4 space-y-2">
+      <nav class="flex flex-col space-y-1">
+        <a 
+          routerLink="/" 
+          fragment="soluciones"
+          (click)="closeMobileMenu()" 
+          class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-md">
+          Soluciones
+        </a>
+        <a 
+          routerLink="/seguridad-fiscal" 
+          routerLinkActive="bg-slate-800 text-white font-semibold"
+          (click)="closeMobileMenu()" 
+          class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-md flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          <span>Seguridad Fiscal</span>
+        </a>
+        <a 
+          routerLink="/bimoneda" 
+          routerLinkActive="bg-slate-800 text-white font-semibold"
+          (click)="closeMobileMenu()" 
+          class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-md">
+          Bimoneda
+        </a>
+        <a 
+          routerLink="/precios" 
+          routerLinkActive="bg-slate-800 text-white font-semibold"
+          (click)="closeMobileMenu()" 
+          class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-md">
+          Precios
+        </a>
+      </nav>
+
+      <div class="pt-3 border-t border-slate-800 sm:hidden">
+        <a 
+          routerLink="/auth/login" 
+          (click)="closeMobileMenu()"
+          class="block text-center py-2 text-sm font-medium text-slate-300 hover:text-white bg-slate-800/40 rounded-lg">
+          Iniciar Sesión
+        </a>
+      </div>
+    </div>
+  }
 </header>

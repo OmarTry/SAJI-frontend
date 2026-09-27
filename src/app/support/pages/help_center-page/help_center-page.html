@@ -1,0 +1,491 @@
+<div class="flex flex-col w-full text-charcoal">
+
+  <!-- ================================================================= -->
+  <!-- 1. HERO DE BÚSQUEDA Y BIENVENIDA (Fondo Gris Pizarra Técnico)     -->
+  <!-- ================================================================= -->
+  <section class="w-full bg-slate-50 border-b border-slate-200 py-12 lg:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-primary/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+    <div class="max-w-[1400px] mx-auto text-center flex flex-col items-center relative z-10">
+      
+      <!-- Badge Superior -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white border border-slate-200 text-slate-700 text-xs font-mono font-bold tracking-wider uppercase mb-5 shadow-2xs">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span>Soporte Técnico Especializado &amp; Base de Conocimientos</span>
+      </div>
+
+      <!-- Título Principal -->
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal max-w-3xl tracking-tight leading-tight">
+        ¿Cómo podemos ayudarte hoy con tu gestión contable y fiscal?
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="mt-3.5 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Encuentra guías paso a paso, normativas SENIAT, integración de tasa BCV y resolución rápida de incidencias tributarias en un solo lugar.
+      </p>
+
+      <!-- Barra de Búsqueda Interactiva -->
+      <div class="mt-8 w-full max-w-2xl bg-white p-1.5 rounded-xl shadow-md border border-slate-300/80 flex items-center gap-2 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
+        <div class="pl-3 flex items-center text-slate-400">
+          <span class="material-symbols-outlined text-[22px]">search</span>
+        </div>
+        <input 
+        type="text" 
+        [ngModel]="searchQuery()" 
+        (ngModelChange)="searchQuery.set($event)"
+        placeholder="Busca guías, retenciones de IVA, diferencial cambiario o providencia 0071..." 
+        class="w-full h-10 bg-transparent px-2 text-xs sm:text-sm text-charcoal placeholder:text-slate-400 focus:outline-none"
+        />
+        <button 
+          type="button" 
+          class="h-10 px-5 bg-primary hover:bg-primary-hover text-white font-semibold text-xs sm:text-sm rounded-lg transition-colors flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
+          <span>Buscar</span>
+        </button>
+      </div>
+
+      <!-- Pills de Búsquedas Populares -->
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
+        <span class="text-slate-400 font-medium">Búsquedas frecuentes:</span>
+        <button 
+          type="button" 
+          (click)="setSearchTerm('Retenciones IVA 75%')"
+          class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-colors text-xs font-medium cursor-pointer">
+          Retenciones IVA 75%
+        </button>
+        <button 
+          type="button" 
+          (click)="setSearchTerm('Cierre Fiscal Multimoneda')"
+          class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-colors text-xs font-medium cursor-pointer">
+          Cierre Fiscal Multimoneda
+        </button>
+        <button 
+          type="button" 
+          (click)="setSearchTerm('Tasa Oficial BCV')"
+          class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-colors text-xs font-medium cursor-pointer">
+          Tasa Oficial BCV
+        </button>
+        <button 
+          type="button" 
+          (click)="setSearchTerm('IGTF 3%')"
+          class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-colors text-xs font-medium cursor-pointer">
+          IGTF 3%
+        </button>
+        <button 
+          type="button" 
+          (click)="setSearchTerm('Libro de Compras SENIAT')"
+          class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 transition-colors text-xs font-medium cursor-pointer">
+          Libro de Compras SENIAT
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 2. TARJETAS DE CATEGORÍAS DE AYUDA (Fondo Blanco)                 -->
+  <!-- ================================================================= -->
+  <section class="w-full bg-white py-14 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+        <div>
+          <span class="text-primary text-xs font-mono font-bold tracking-wider uppercase">Exploración Temática</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal tracking-tight mt-1">Módulos y Áreas de Conocimiento</h2>
+        </div>
+        <span class="text-xs text-slate-500 mt-2 sm:mt-0 font-medium">6 categorías normativas y operativas</span>
+      </div>
+
+      <!-- Grid de 6 Tarjetas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Categoría 1 -->
+        <div class="group p-6 bg-slate-50 hover:bg-slate-100/80 rounded-xl border border-slate-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-[22px]">payments</span>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+            </div>
+            <h3 class="text-base font-bold text-charcoal mb-1.5 group-hover:text-primary transition-colors">
+              Facturación &amp; Bimoneda
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Configuración de emisión dual, tasas automáticas BCV y facturas con desglose en Bolívares y Divisas.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-200 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+            <span>14 Guías Prácticas</span>
+            <span>•</span>
+            <span class="text-emerald-700">Actualizado hoy</span>
+          </div>
+        </div>
+
+        <!-- Categoría 2 -->
+        <div class="group p-6 bg-slate-50 hover:bg-slate-100/80 rounded-xl border border-slate-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200">
+                <span class="material-symbols-outlined text-[22px]">verified_user</span>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+            </div>
+            <h3 class="text-base font-bold text-charcoal mb-1.5 group-hover:text-primary transition-colors">
+              Retenciones &amp; SENIAT
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Generación de comprobantes XML/TXT, alícuotas de IVA e ISLR, y formatos para carga masiva al portal fiscal.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-200 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+            <span>22 Artículos</span>
+            <span>•</span>
+            <span class="text-emerald-700">Validado 2026</span>
+          </div>
+        </div>
+
+        <!-- Categoría 3 -->
+        <div class="group p-6 bg-slate-50 hover:bg-slate-100/80 rounded-xl border border-slate-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-[22px]">menu_book</span>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+            </div>
+            <h3 class="text-base font-bold text-charcoal mb-1.5 group-hover:text-primary transition-colors">
+              Libros y Contabilidad Legal
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Libros de Compra y Venta bajo Providencia 0071, asientos automáticos y balance de cuentas con cierre formal.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-200 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+            <span>18 Documentos</span>
+            <span>•</span>
+            <span>Prov. 0071</span>
+          </div>
+        </div>
+
+        <!-- Categoría 4 -->
+        <div class="group p-6 bg-slate-50 hover:bg-slate-100/80 rounded-xl border border-slate-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-[22px]">domain</span>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+            </div>
+            <h3 class="text-base font-bold text-charcoal mb-1.5 group-hover:text-primary transition-colors">
+              Multi-Empresa &amp; Multi-RIF
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Administración centralizada de carteras para firmas y despachos contables con accesos diferenciados y roles.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-200 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+            <span>9 Instructivos</span>
+            <span>•</span>
+            <span>Firmas &amp; Auditores</span>
+          </div>
+        </div>
+
+        <!-- Categoría 5 -->
+        <div class="group p-6 bg-slate-50 hover:bg-slate-100/80 rounded-xl border border-slate-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200">
+                <span class="material-symbols-outlined text-[22px]">lock</span>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+            </div>
+            <h3 class="text-base font-bold text-charcoal mb-1.5 group-hover:text-primary transition-colors">
+              Seguridad &amp; Cifrado SHA-256
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Sellado criptográfico en libros auxiliares, copias de seguridad continuas y bitácora inviolable de auditoría.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-200 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+            <span>11 Protocolos</span>
+            <span>•</span>
+            <span>Inmutabilidad SHA-256</span>
+          </div>
+        </div>
+
+        <!-- Categoría 6 -->
+        <div class="group p-6 bg-slate-50 hover:bg-slate-100/80 rounded-xl border border-slate-200 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-[22px]">webhook</span>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 group-hover:text-primary group-hover:translate-x-1 transition-all text-[20px]">arrow_forward</span>
+            </div>
+            <h3 class="text-base font-bold text-charcoal mb-1.5 group-hover:text-primary transition-colors">
+              Integraciones &amp; API
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Conexión con puntos de venta, sistemas legados (Saint, Profit) y webhooks para sincronización fiscal.
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-200 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+            <span>16 Endpoints &amp; SDKs</span>
+            <span>•</span>
+            <span class="text-primary font-bold">API REST v2</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 3. ARTÍCULOS MÁS CONSULTADOS (ACORDEÓN REACTIVO EN ANGULAR)       -->
+  <!-- ================================================================= -->
+  <section class="w-full bg-[#f8fafc] py-14 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        <div>
+          <span class="text-primary text-xs font-mono font-bold uppercase tracking-wider">Base Resolutiva</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal tracking-tight mt-1">Documentación y Guías Frecuentes</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Respuestas directas redactadas por nuestros contadores y auditores de sistemas.</p>
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Acordeones -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
+        @for (faq of faqs; track faq.id) {
+          <div 
+            (click)="toggleFaq(faq.id)"
+            class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:shadow-sm transition-all cursor-pointer">
+            
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span [class]="faq.badgeClass" class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">
+                    {{ faq.badge }}
+                  </span>
+                  <span class="text-[11px] text-slate-400 flex items-center gap-0.5">
+                    <span class="material-symbols-outlined text-[13px]">schedule</span> {{ faq.readTime }} de lectura
+                  </span>
+                </div>
+                <h4 class="text-sm font-bold text-charcoal hover:text-primary transition-colors leading-snug">
+                  {{ faq.question }}
+                </h4>
+              </div>
+
+              <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 shrink-0 transition-transform"
+                [class.rotate-180]="openFaqId() === faq.id">
+                <span class="material-symbols-outlined text-[18px]">expand_more</span>
+              </div>
+            </div>
+
+            @if (openFaqId() === faq.id) {
+              <div class="mt-4 pt-3.5 border-t border-slate-100 text-xs text-slate-600 leading-relaxed space-y-2">
+                <p>{{ faq.paragraph1 }}</p>
+                
+                @if (faq.steps) {
+                  <ol class="list-decimal list-inside space-y-1 text-slate-500 pl-1">
+                    @for (step of faq.steps; track step) {
+                      <li>{{ step }}</li>
+                    }
+                  </ol>
+                }
+
+                @if (faq.paragraph2) {
+                  <p class="text-slate-500">{{ faq.paragraph2 }}</p>
+                }
+              </div>
+            }
+
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 4. PANEL DE ESTADO OPERATIVO EN VIVO                              -->
+  <!-- ================================================================= -->
+  <section class="w-full bg-white py-14 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 border-l-4 border-l-emerald-500 shadow-2xs">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-6 border-b border-slate-200">
+          <div class="flex items-center gap-3">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-600"></span>
+            </span>
+            <div>
+              <h3 class="text-base font-bold text-charcoal">Todos los sistemas operando con normalidad</h3>
+              <p class="text-xs text-slate-500 font-medium">99.98% de disponibilidad en el cluster Caracas</p>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-1.5 font-mono text-[11px] text-slate-600 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-2xs self-start sm:self-auto">
+            <span class="material-symbols-outlined text-[15px] text-emerald-600">sync</span>
+            <span>Actualización horaria continua</span>
+          </div>
+        </div>
+
+        <!-- 4 Micro-servicios -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="p-4 bg-white rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-mono font-bold text-slate-500 uppercase">Sincronizador BCV</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <p class="text-sm font-bold text-emerald-700">Operativo</p>
+            <p class="text-[11px] text-slate-400 mt-0.5">Última captura: hace 4 min</p>
+            <div class="mt-2.5 w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-500 h-full w-full"></div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-mono font-bold text-slate-500 uppercase">Motor Facturación</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <p class="text-sm font-bold text-emerald-700">Operativo</p>
+            <p class="text-[11px] text-slate-400 mt-0.5">Latencia promedio: 38ms</p>
+            <div class="mt-2.5 w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-500 h-full w-full"></div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-mono font-bold text-slate-500 uppercase">Generador SENIAT</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <p class="text-sm font-bold text-emerald-700">Operativo</p>
+            <p class="text-[11px] text-slate-400 mt-0.5">TXT/XML 100% verificado</p>
+            <div class="mt-2.5 w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-500 h-full w-full"></div>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-mono font-bold text-slate-500 uppercase">Respaldos en Nube</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <p class="text-sm font-bold text-emerald-700">Protegido</p>
+            <p class="text-[11px] text-slate-400 mt-0.5">Sellado SHA-256 intacto</p>
+            <div class="mt-2.5 w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-500 h-full w-full"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 5. BLOQUE DE ATENCIÓN DIRECTA Y SOPORTE HUMANO                    -->
+  <!-- ================================================================= -->
+  <section class="w-full bg-[#0f172a] text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="absolute -right-16 -top-16 w-80 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1400px] mx-auto relative z-10">
+      
+      <div class="max-w-2xl mb-10 text-left">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-orange-400 font-mono text-[10px] font-bold uppercase tracking-wider mb-3 border border-white/10">
+          Mesa de Ayuda Directa
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          ¿No encuentras la solución a tu caso contable?
+        </h2>
+        <p class="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Nuestro equipo de consultores tributarios y soporte técnico en Caracas está disponible de lunes a viernes de 8:00 AM a 6:00 PM para asistirte en tiempo real.
+        </p>
+      </div>
+
+      <!-- 3 Opciones de Contacto -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        
+        <!-- Tarjeta 1: Chat -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-primary/20 text-primary flex items-center justify-center mb-4 border border-primary/30">
+              <span class="material-symbols-outlined text-[20px]">forum</span>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1">Chat de Soporte en Vivo</h4>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Atención inmediata con un asesor técnico certificado en tributos venezolanos.
+            </p>
+            <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 font-semibold mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Tiempo de espera: &lt; 5 min</span>
+            </div>
+          </div>
+          <button 
+            type="button" 
+            class="w-full h-10 bg-primary hover:bg-primary-hover text-white font-semibold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>Iniciar Chat</span>
+          </button>
+        </div>
+
+        <!-- Tarjeta 2: Teléfono -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center mb-4 border border-white/10">
+              <span class="material-symbols-outlined text-[20px]">call</span>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1">Línea Telefónica Directa</h4>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Contacto telefónico directo con nuestra central de atención corporativa en Caracas.
+            </p>
+            <div class="text-base font-bold text-white font-mono mb-6">
+              +58 (212) 700-SAJI <span class="text-xs text-slate-400 font-normal">(7254)</span>
+            </div>
+          </div>
+          <a 
+            href="tel:+582127007254" 
+            class="w-full h-10 bg-white/10 hover:bg-white/15 text-white font-semibold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 border border-white/10">
+            <span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+            <span>Llamar a Central</span>
+          </a>
+        </div>
+
+        <!-- Tarjeta 3: Ticket -->
+        <div class="bg-white/[0.04] border border-white/10 rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center mb-4 border border-white/10">
+              <span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+            </div>
+            <h4 class="text-base font-bold text-white mb-1">Tickets de Auditoría</h4>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Para firmas de contadores y empresas con incidencias tributarias complejas o SLA dedicado.
+            </p>
+            <div class="flex items-center gap-1.5 text-xs text-slate-400 mb-6">
+              <span class="material-symbols-outlined text-[16px] text-emerald-400">verified</span>
+              <span>Prioridad alta garantizada</span>
+            </div>
+          </div>
+          <button 
+            type="button" 
+            class="w-full h-10 bg-white/10 hover:bg-white/15 text-white font-semibold text-xs rounded-lg transition-colors flex items-center justify-center gap-2 border border-white/10 cursor-pointer">
+            <span class="material-symbols-outlined text-[16px]">send</span>
+            <span>Crear Ticket</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>

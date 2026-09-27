@@ -1,0 +1,383 @@
+<div class="space-y-8 text-left transition-colors duration-200">
+
+  <!-- ================================================================= -->
+  <!-- 1. BIENVENIDA Y ESTADO DEL PERIODO FISCAL                         -->
+  <!-- ================================================================= -->
+  <section class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Buenos días, Andrea</h1>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+        Resumen contable y obligaciones fiscales vigentes al <span class="font-semibold text-slate-700 dark:text-slate-300">13 de Noviembre 2026</span>.
+      </p>
+    </div>
+    <div class="flex items-center gap-2 text-xs">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        Libro Diario al día
+      </span>
+      <span class="text-slate-400">·</span>
+      <span class="text-slate-500 dark:text-slate-400 font-medium">Periodo Quincena II</span>
+    </div>
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 2. TARJETAS DE MÉTRICAS ESENCIALES (3 COLUMNAS)                   -->
+  <!-- ================================================================= -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    
+    <!-- Facturación del Mes -->
+    <div class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-colors flex flex-col justify-between">
+      <div class="flex items-start justify-between">
+        <span class="text-xs font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase">Facturación del Mes</span>
+        <span class="px-2 py-0.5 rounded-md text-[11px] font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">+12.4%</span>
+      </div>
+      <div class="my-4">
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono tabular-nums">$48,250.00</span>
+          <span class="text-xs font-medium text-slate-400">USD</span>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
+          Equivalente BCV: <span class="text-slate-800 dark:text-slate-200 font-mono font-medium">Bs. 1.757.506,25</span>
+        </p>
+      </div>
+      <div class="pt-3 border-t border-slate-100 dark:border-white/[0.04] flex items-center justify-between text-[11px] text-slate-400">
+        <span>Octubre: $42,910.00</span>
+        <span class="text-slate-500 dark:text-slate-400">128 facturas emitidas</span>
+      </div>
+    </div>
+
+    <!-- Cuentas por Cobrar -->
+    <div class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-colors flex flex-col justify-between">
+      <div class="flex items-start justify-between">
+        <span class="text-xs font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase">Cuentas por Cobrar (CxC)</span>
+        <span class="text-xs text-slate-400">82% vigentes</span>
+      </div>
+      <div class="my-4">
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono tabular-nums">$14,800.00</span>
+          <span class="text-xs font-medium text-slate-400">USD</span>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
+          Equivalente BCV: <span class="text-slate-800 dark:text-slate-200 font-mono font-medium">Bs. 539.090,00</span>
+        </p>
+      </div>
+      <div class="pt-3 border-t border-slate-100 dark:border-white/[0.04] flex items-center justify-between text-[11px] text-slate-400">
+        <span>$2,664 vencidas (>30d)</span>
+        <span class="text-primary hover:underline cursor-pointer font-medium">Ver gestión →</span>
+      </div>
+    </div>
+
+    <!-- Pasivo Fiscal Estimado -->
+    <div class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 transition-colors flex flex-col justify-between">
+      <div class="flex items-start justify-between">
+        <span class="text-xs font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase">Pasivo Fiscal Estimado</span>
+        <span class="px-2 py-0.5 rounded-md text-[11px] font-medium bg-primary/10 text-primary border border-primary/20">Vence en 48h</span>
+      </div>
+      <div class="my-4">
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono tabular-nums">Bs. 184.200</span>
+          <span class="text-xs font-medium text-slate-400">VES</span>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
+          Ref. Moneda Ext.: <span class="text-slate-800 dark:text-slate-200 font-mono font-medium">$5.057,00 USD</span>
+        </p>
+      </div>
+      <div class="pt-3 border-t border-slate-100 dark:border-white/[0.04] flex items-center justify-between text-[11px] text-slate-400">
+        <span>Crédito retenciones: -Bs. 45.000</span>
+        <span class="text-emerald-600 dark:text-emerald-400 font-medium">NIC 21 aplicada</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 3. GRÁFICA DE FLUJO OPERATIVO Y AGENDA SENIAT                     -->
+  <!-- ================================================================= -->
+  <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+    
+    <!-- Gráfica de Flujo Bimoneda (8 Cols) -->
+    <div class="lg:col-span-8 p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs transition-colors flex flex-col justify-between">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+        <div>
+          <h2 class="text-base font-bold text-slate-900 dark:text-white">Flujo Operativo Bimoneda</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Ingresos vs Egresos del ciclo actual ajustados a cotización oficial BCV</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Ingresos</span>
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700"></span> Egresos</span>
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-white/[0.04] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/5 font-mono">
+            Noviembre 2026
+          </span>
+        </div>
+      </div>
+
+      <!-- SVG Dinámico: Trazo adaptable a Light y Dark Mode -->
+      <div class="w-full h-56 relative pt-2">
+        <svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 680 180">
+          <defs>
+            <linearGradient id="softOrangeArea" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#e85d04" stop-opacity="0.25"></stop>
+              <stop offset="100%" stop-color="#e85d04" stop-opacity="0.0"></stop>
+            </linearGradient>
+          </defs>
+          
+          <!-- Guías Horizontales Sutiles -->
+          <line class="stroke-slate-200 dark:stroke-slate-800" stroke-dasharray="4 4" x1="0" x2="680" y1="35" y2="35"></line>
+          <line class="stroke-slate-200 dark:stroke-slate-800" stroke-dasharray="4 4" x1="0" x2="680" y1="85" y2="85"></line>
+          <line class="stroke-slate-200 dark:stroke-slate-800" stroke-dasharray="4 4" x1="0" x2="680" y1="135" y2="135"></line>
+
+          <!-- Barras de Egreso Adaptables -->
+          <rect class="fill-slate-200 dark:fill-slate-800" height="40" rx="3" width="14" x="52" y="95"></rect>
+          <rect class="fill-slate-200 dark:fill-slate-800" height="55" rx="3" width="14" x="152" y="80"></rect>
+          <rect class="fill-slate-200 dark:fill-slate-800" height="45" rx="3" width="14" x="252" y="90"></rect>
+          <rect class="fill-slate-200 dark:fill-slate-800" height="30" rx="3" width="14" x="352" y="105"></rect>
+          <rect class="fill-slate-200 dark:fill-slate-800" height="50" rx="3" width="14" x="452" y="85"></rect>
+          <rect class="fill-slate-200 dark:fill-slate-800" height="65" rx="3" width="14" x="552" y="70"></rect>
+          <rect class="fill-slate-200 dark:fill-slate-800" height="45" rx="3" width="14" x="632" y="90"></rect>
+
+          <!-- Curva y Área de Ingresos (Naranja Corporativo) -->
+          <path d="M 59 105 C 110 80, 140 55, 159 60 C 200 68, 230 75, 259 55 C 310 30, 330 40, 359 42 C 410 45, 430 65, 459 50 C 510 25, 530 35, 559 30 C 600 25, 620 40, 639 36 L 639 135 L 59 135 Z" fill="url(#softOrangeArea)"></path>
+          <path d="M 59 105 C 110 80, 140 55, 159 60 C 200 68, 230 75, 259 55 C 310 30, 330 40, 359 42 C 410 45, 430 65, 459 50 C 510 25, 530 35, 559 30 C 600 25, 620 40, 639 36" fill="none" stroke="#e85d04" stroke-linecap="round" stroke-width="2.5"></path>
+          
+          <!-- Nodo Activo -->
+          <circle cx="639" cy="36" fill="#e85d04" r="4.5" class="stroke-white dark:stroke-[#111827]" stroke-width="2"></circle>
+        </svg>
+
+        <!-- Eje de Días -->
+        <div class="flex justify-between text-[11px] text-slate-400 font-mono pt-2 px-6">
+          <span>01 Nov</span>
+          <span>03 Nov</span>
+          <span>05 Nov</span>
+          <span>07 Nov</span>
+          <span>09 Nov</span>
+          <span>11 Nov</span>
+          <span class="text-primary font-bold">Hoy (13 Nov)</span>
+        </div>
+      </div>
+
+      <!-- Resumen Inferior -->
+      <div class="mt-4 pt-4 border-t border-slate-100 dark:border-white/[0.04] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+        <div class="flex items-center gap-6">
+          <span>Facturación promedio día: <strong class="text-slate-900 dark:text-white font-mono font-semibold">$3,711.50</strong></span>
+          <span>Margen bruto estimado: <strong class="text-emerald-600 dark:text-emerald-400 font-semibold">41.8%</strong></span>
+        </div>
+        <a class="text-primary hover:underline font-medium text-xs cursor-pointer" routerLink="/app/billing">Ver análisis detallado →</a>
+      </div>
+    </div>
+
+    <!-- Agenda SENIAT (4 Cols) -->
+    <div class="lg:col-span-4 p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs transition-colors flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/[0.04]">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[20px] text-primary">calendar_month</span>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Agenda SENIAT</h3>
+          </div>
+          <span class="text-[11px] text-slate-400 font-mono">RIF · 2</span>
+        </div>
+
+        <!-- Lista de Vencimientos -->
+        <div class="mt-4 space-y-3">
+          
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-primary">15 de Noviembre</span>
+              <span class="text-[10px] uppercase font-semibold tracking-wider text-amber-600 dark:text-amber-400 px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-400/10 border border-amber-200 dark:border-amber-400/20">En 2 días</span>
+            </div>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mt-1.5">Declaración Quincenal de IVA</h4>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">
+              Archivo TXT de retenciones según providencia SNAT/2015/0049.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">20 de Noviembre</span>
+              <span class="text-[10px] uppercase font-medium text-slate-400">En 7 días</span>
+            </div>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mt-1.5">Transmisión Libro de Ventas</h4>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">
+              Integración contable de foliación y máquinas fiscales.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">30 de Noviembre</span>
+              <span class="text-[10px] uppercase font-medium text-slate-400">Fin de mes</span>
+            </div>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mt-1.5">Cierre NIC 21 (Diferencial)</h4>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">
+              Reexpresión de saldos en moneda extranjera a tasa de cierre BCV.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <button 
+        type="button" 
+        class="w-full mt-5 py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-white/[0.04] dark:hover:bg-white/[0.08] text-slate-800 dark:text-white text-xs font-semibold border border-slate-200 dark:border-white/10 transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-2xs">
+        <span class="material-symbols-outlined text-[16px] text-primary">download</span>
+        <span>Generar Paquete Quincenal (TXT/XML)</span>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ================================================================= -->
+  <!-- 4. TABLA DE COMPROBANTES Y OPERACIONES RECIENTES                  -->
+  <!-- ================================================================= -->
+  <section class="rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-2xs overflow-hidden transition-colors">
+    <div class="p-6 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-white/[0.04]">
+      <div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">Comprobantes &amp; Operaciones Recientes</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Sincronizados en tiempo real con el Libro Fiscal y Conciliación Bancaria</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-white/[0.06] text-slate-900 dark:text-white">Todos</button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-colors">Facturas</button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-colors">Retenciones</button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/[0.03] transition-colors">Gastos</button>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs border-collapse">
+        <thead>
+          <tr class="text-[11px] font-semibold text-slate-400 uppercase border-b border-slate-100 dark:border-white/[0.04] bg-slate-50/50 dark:bg-white/[0.01]">
+            <th class="py-3 px-6">Documento</th>
+            <th class="py-3 px-6">Cliente / Proveedor</th>
+            <th class="py-3 px-6">Fecha</th>
+            <th class="py-3 px-6 text-right">Monto Bimoneda</th>
+            <th class="py-3 px-6 text-center">Estatus Fiscal</th>
+            <th class="py-3 px-6 text-right">Acción</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-white/[0.03] text-slate-600 dark:text-slate-300">
+          
+          <!-- Fila 1 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-6 font-mono text-slate-900 dark:text-white font-semibold">
+              FACT-002891
+              <span class="block text-[11px] text-slate-400 font-sans font-normal">Ctrl: 00-019482</span>
+            </td>
+            <td class="py-4 px-6">
+              <div class="font-semibold text-slate-800 dark:text-white truncate max-w-[220px]">Distribuidora Los Andes C.A.</div>
+              <div class="text-[11px] text-slate-400 font-mono">RIF: J-31298455-1</div>
+            </td>
+            <td class="py-4 px-6 text-slate-500 dark:text-slate-400">Hoy, 09:42 AM</td>
+            <td class="py-4 px-6 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$1,000.00 USD</span>
+              <span class="text-[11px] text-slate-400">Bs. 36.425,00</span>
+            </td>
+            <td class="py-4 px-6 text-center">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                Timbrado SENIAT
+              </span>
+            </td>
+            <td class="py-4 px-6 text-right">
+              <button type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-colors" title="Ver comprobante">
+                <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Fila 2 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-6 font-mono text-slate-900 dark:text-white font-semibold">
+              RET-IVA-2026-089
+              <span class="block text-[11px] text-slate-400 font-sans font-normal">Compr. 20261100089</span>
+            </td>
+            <td class="py-4 px-6">
+              <div class="font-semibold text-slate-800 dark:text-white truncate max-w-[220px]">Cervecería Polar C.A.</div>
+              <div class="text-[11px] text-slate-400 font-mono">RIF: J-00006372-9</div>
+            </td>
+            <td class="py-4 px-6 text-slate-500 dark:text-slate-400">Ayer, 04:15 PM</td>
+            <td class="py-4 px-6 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$120.00 USD</span>
+              <span class="text-[11px] text-slate-400">Bs. 4.371,00</span>
+            </td>
+            <td class="py-4 px-6 text-center">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 dark:bg-white/[0.06] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10">
+                Retención 75%
+              </span>
+            </td>
+            <td class="py-4 px-6 text-right">
+              <button type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-colors" title="Descargar comprobante">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Fila 3 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-6 font-mono text-slate-900 dark:text-white font-semibold">
+              FACT-002890
+              <span class="block text-[11px] text-slate-400 font-sans font-normal">Ctrl: 00-019481</span>
+            </td>
+            <td class="py-4 px-6">
+              <div class="font-semibold text-slate-800 dark:text-white truncate max-w-[220px]">Agropecuaria El Palmar S.A.</div>
+              <div class="text-[11px] text-slate-400 font-mono">RIF: J-29401822-0</div>
+            </td>
+            <td class="py-4 px-6 text-slate-500 dark:text-slate-400">11 Nov, 11:05 AM</td>
+            <td class="py-4 px-6 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$2,400.00 USD</span>
+              <span class="text-[11px] text-slate-400">Bs. 87.420,00</span>
+            </td>
+            <td class="py-4 px-6 text-center">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20">
+                Pendiente Pago
+              </span>
+            </td>
+            <td class="py-4 px-6 text-right">
+              <button type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-colors" title="Gestionar cobro">
+                <span class="material-symbols-outlined text-[18px]">credit_card</span>
+              </button>
+            </td>
+          </tr>
+
+          <!-- Fila 4 -->
+          <tr class="hover:bg-slate-50/80 dark:hover:bg-white/[0.02] transition-colors">
+            <td class="py-4 px-6 font-mono text-slate-900 dark:text-white font-semibold">
+              CMP-004128
+              <span class="block text-[11px] text-slate-400 font-sans font-normal">Gasto Telecomunicaciones</span>
+            </td>
+            <td class="py-4 px-6">
+              <div class="font-semibold text-slate-800 dark:text-white truncate max-w-[220px]">Servicios Telemáticos Digitel</div>
+              <div class="text-[11px] text-slate-400 font-mono">RIF: J-30468971-3</div>
+            </td>
+            <td class="py-4 px-6 text-slate-500 dark:text-slate-400">10 Nov, 02:30 PM</td>
+            <td class="py-4 px-6 text-right font-mono">
+              <span class="font-bold text-slate-900 dark:text-white block">$90.00 USD</span>
+              <span class="text-[11px] text-slate-400">Bs. 3.278,25</span>
+            </td>
+            <td class="py-4 px-6 text-center">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                Conciliado
+              </span>
+            </td>
+            <td class="py-4 px-6 text-right">
+              <button type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-colors" title="Ver asiento">
+                <span class="material-symbols-outlined text-[18px]">visibility</span>
+              </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer de Tabla -->
+    <div class="p-4 px-6 border-t border-slate-100 dark:border-white/[0.04] bg-slate-50/50 dark:bg-white/[0.01] flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+      <span>Mostrando 4 comprobantes del ciclo actual</span>
+      <a class="text-primary hover:underline font-semibold flex items-center gap-1 cursor-pointer" routerLink="/app/billing">
+        <span>Ver historial completo de comprobantes</span>
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+      </a>
+    </div>
+  </section>
+
+</div>

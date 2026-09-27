@@ -38,7 +38,7 @@ export const serverRoutes: ServerRoute[] = [
     // 2. ACCESO Y SEGURIDAD (SSR Dinámico bajo demanda)
     // Cubre /auth, /auth/login, /auth/register, /auth/recuperar, etc.
     {
-        path: 'auth/**',
+        path: 'acceso/**',
         renderMode: RenderMode.Server,
     },
 

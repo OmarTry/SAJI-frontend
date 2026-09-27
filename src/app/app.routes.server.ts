@@ -45,13 +45,13 @@ export const serverRoutes: ServerRoute[] = [
     // 3. PLATAFORMA PRIVADA ERP (Client o Server)
     // Cubre /app, /app/dashboard, /app/libros-fiscales, /app/retenciones, etc.
     {
-        path: 'app',
+        path: 'app/**',
         renderMode: RenderMode.Client, // o RenderMode.Server (ver detalle abajo)
     },
 
     // 4. CATCH-ALL: Página no encontrada y rutas no contempladas
     {
         path: '**',
-        renderMode: RenderMode.Server,
+        renderMode: RenderMode.Client,
     },
 ];
